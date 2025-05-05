@@ -7,7 +7,7 @@ export function ChatWidget() {
     {
       type: 'bot',
       content:
-        "Welcome to AI Explorers! I'm an AI assistant here to help answer your questions about our programs. How can I assist you today?",
+        "Welcome to AI Explorers! I'm an assistant here to help answer your questions about our programs. How can I assist you today?",
     },
   ]);
   const [input, setInput] = useState('');
@@ -15,8 +15,36 @@ export function ChatWidget() {
   const handleSend = () => {
     if (!input.trim()) return;
 
-    // Add user's message to the chat
-    setMessages([...messages, { type: 'user', content: input.trim() }]);
+    const userMessage = input.trim();
+    const lowerInput = userMessage.toLowerCase();
+    let botReply = '';
+
+    // Static keyword-based Q&A logic
+    if (lowerInput.includes('date') || lowerInput.includes('when')) {
+      botReply = 'The AI Explorers Summer School runs from June 28 to June 30.';
+    } else if (lowerInput.includes('location')) {
+      botReply = 'The program is hosted online, so you can join from anywhere.';
+    } else if (lowerInput.includes('apply') || lowerInput.includes('application')) {
+      botReply = 'You can apply through our website on the Admissions page.';
+    } else if (lowerInput.includes('cost') || lowerInput.includes('price')) {
+      botReply = 'The program is free for all admitted students.';
+    } else if (lowerInput.includes('ai explorers')) {
+      botReply = 'AI Explorers is a 3-day summer program where students learn about AI, coding, and real-world tech applications.';
+    } else if (lowerInput.includes('schedule')) {
+      botReply = 'Each day includes lectures, hands-on coding, guest speakers, and team projects.';
+    } else if (lowerInput.includes('age') || lowerInput.includes('grade')) {
+      botReply = 'The program is open to high school and early college students interested in technology.';
+    } else {
+      botReply = "I'm not sure how to answer that yet, but feel free to explore the website for more information!";
+    }
+
+    // Add user and bot messages to chat
+    setMessages((prev) => [
+      ...prev,
+      { type: 'user', content: userMessage },
+      { type: 'bot', content: botReply },
+    ]);
+
     setInput('');
   };
 
