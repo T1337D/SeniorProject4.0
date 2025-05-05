@@ -214,11 +214,11 @@ function App() {
                   title={speaker.title}
                   bio={speaker.bio}
                 >
-                  <div className="cursor-pointer">
+                  <div className="cursor-pointer text-center">
                     <img
                       src={speaker.image}
                       alt={speaker.name}
-                      className="w-full aspect-square object-cover rounded-lg mb-3"
+                      className="w-[200px] h-[200px] object-cover rounded-lg mb-3"
                     />
                     <h3 className="font-semibold text-lg">{speaker.name}</h3>
                   </div>
