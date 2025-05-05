@@ -88,65 +88,6 @@ function App() {
           </div>
         </div>
 
-        {/* Program Features */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Discover. Explore. Grow.</h2>
-              <p className="text-gray-700 max-w-3xl">
-                
-                AI Explorers Summer School provides participants with an immersive experience and challenges
-                 students with advanced content not typically found in many curricula.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-16">
-              <div className="flex gap-6">
-                <BookOpen className="w-12 h-12 text-[#8C1515] flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Single-Subject Study</h3>
-                  <p className="text-gray-700">
-                  
-                    Participants will engage in interactive courses that explore fundamental and advanced concepts
-                     in artificial intelligence. Topics include machine learning, natural language processing, computer vision, and the ethical implications of AI, with hands-on projects to apply their knowledge in real-world scenarios.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <Globe2 className="w-12 h-12 text-[#8C1515] flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Global Focus and Real Connections</h3>
-                  <p className="text-gray-700">
-                    Bright peers from around the world create a truly special and unforgettable 
-                    experience. Study and discuss academic topics alongside peers who share similar 
-                    talents, interests, and curiosity.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <Monitor className="w-12 h-12 text-[#8C1515] flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Live Online Classes</h3>
-                  <p className="text-gray-700">
-                  
-                    If you can't make it in person, our live online meetings allow students to engage in
-                     every aspect of a course through real-time discussions in which instructors and students see, hear, and interact with one another.
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <Award className="w-12 h-12 text-[#8C1515] flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Learn from Scholarly Instructors</h3>
-                  <p className="text-gray-700">
-                    Attend courses designed, created, and taught by instructors who are knowledgeable 
-                    in their fields and passionate about teaching.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Program Highlights */}
         <section className="py-20 px-4">
