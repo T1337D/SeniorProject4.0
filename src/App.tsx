@@ -336,18 +336,8 @@ function App() {
           </div>
         </section>
 
-        {/* Map Section */}
-        <section className="bg-[#8C1515] text-white py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-light leading-relaxed mb-8">Map</h2>
-            <div className="flex justify-center">
-            <a href='https://mapmyvisitors.com/web/1by7l'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=080808&w=753&t=n&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&ct=808080'/></a>
-            </div>
-          </div>
-        </section>
 
         
-
         {/* Student Testimonials */}
         <section className="bg-gray-100 py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -377,6 +367,16 @@ function App() {
           </div>
         </section>
 
+        {/* Map Section */}
+        <section className="bg-[#8C1515] text-white py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-light leading-relaxed mb-8">Visitor Map</h2>
+            <div className="flex justify-center">
+            <a href='https://mapmyvisitors.com/web/1by7l'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=080808&w=753&t=n&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&ct=808080'/></a>
+            </div>
+          </div>
+        </section>        
+
         {/* Mailing List Section */}
         <section id="mailinglist" className="bg-[#8C1515] py-20 px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
@@ -395,6 +395,45 @@ function App() {
             </form>
           </div>
         </section>
+
+
+        {/* Student Testimonials */}
+        <section className="bg-gray-100 py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-16">Hear from Our Students</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80" 
+                  alt="Student studying" 
+                  className="w-full h-96 object-cover rounded-lg"
+                />
+              </div>
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80" 
+                  alt="Student studying" 
+                  className="w-full h-96 object-cover rounded-lg"
+                />
+              </div>
+              <div className="flex items-center">
+                <div>
+                <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80" 
+                  alt="Student studying" 
+                  className="w-full h-96 object-cover rounded-lg"
+                />
+              </div>
+                  <p className="text-gray-700">
+                    - Participant, 2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Footer */}
         <footer className="bg-[#2E2D29] text-white py-16">
