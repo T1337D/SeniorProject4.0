@@ -367,15 +367,7 @@ function App() {
           </div>
         </section>
 
-        {/* Map Section */}
-        <section className="bg-[#8C1515] text-white py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-light leading-relaxed mb-8">Visitor Map</h2>
-            <div className="flex justify-center">
-            <a href='https://mapmyvisitors.com/web/1by7l'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=080808&w=753&t=n&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&ct=808080'/></a>
-            </div>
-          </div>
-        </section>        
+     
 
 
         {/* Photo Section */}
@@ -400,6 +392,20 @@ function App() {
             </div>
           </div>
         </section>
+
+
+        {/* Map Section */}
+        <section className="bg-[#8C1515] text-white py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-light leading-relaxed mb-8">Visitor Map</h2>
+            <div className="flex justify-center">
+            <img 
+              src="https://mapmyvisitors.com/map.png?cl=080808&w=753&t=n&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&ct=808080" 
+              alt="Visitor Map" 
+            />
+            </div>
+          </div>
+        </section>   
 
 
 {/* 
