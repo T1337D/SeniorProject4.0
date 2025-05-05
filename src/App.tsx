@@ -58,9 +58,9 @@ function App() {
             <div className="max-w-7xl mx-auto px-4 text-white">
               <h1 className="text-5xl font-bold mb-6">Expand Your Intellectual Horizons</h1>
               <p className="text-xl max-w-3xl">
-                Stanford Pre-Collegiate Summer Institutes is a summer enrichment program that provides 
-                intellectually curious students currently in grades 8–11 with intensive study in a 
-                single online course.
+                AI Explorers Summer School inspires academically motivated Pre-Collegiate and Collegiate students 
+                on their journey to becoming leaders that will transform the future. In an inclusive classroom setting without the pressure of grades,
+                 students explore advanced study and build bonds with peers from around the world."
               </p>
             </div>
           </div>
@@ -111,9 +111,9 @@ function App() {
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Discover. Explore. Grow.</h2>
               <p className="text-gray-700 max-w-3xl">
-                Stanford Pre-Collegiate Summer Institutes provides participants with an immersive Stanford 
-                classroom experience and challenges students with advanced content not typically found in 
-                the high-school curriculum.
+                
+                AI Explorers Summer School provides participants with an immersive experience and challenges
+                 students with advanced content not typically found in many curricula.
               </p>
             </div>
 
@@ -123,10 +123,9 @@ function App() {
                 <div>
                   <h3 className="text-xl font-bold mb-4">Single-Subject Study</h3>
                   <p className="text-gray-700">
-                    Choose from over 70 online summer courses that provide in-depth and interactive 
-                    exploration of academic material. Courses are ungraded and are not awarded credit. 
-                    Explore courses in subjects such as art, computer science, mathematics, social 
-                    justice, philosophy, engineering, and more.
+                  
+                    Participants will engage in interactive courses that explore fundamental and advanced concepts
+                     in artificial intelligence. Topics include machine learning, natural language processing, computer vision, and the ethical implications of AI, with hands-on projects to apply their knowledge in real-world scenarios.
                   </p>
                 </div>
               </div>
@@ -146,9 +145,9 @@ function App() {
                 <div>
                   <h3 className="text-xl font-bold mb-4">Live Online Classes</h3>
                   <p className="text-gray-700">
-                    With small class sizes, our live online class meetings allow students to engage in 
-                    every aspect of a course through real-time discussions in which instructors and 
-                    students see, hear, and interact with one another.
+                  
+                    If you can't make it in person, our live online meetings allow students to engage in
+                     every aspect of a course through real-time discussions in which instructors and students see, hear, and interact with one another.
                   </p>
                 </div>
               </div>
@@ -173,13 +172,15 @@ function App() {
               <div>
                 <h2 className="text-2xl font-bold mb-2">Application Now Closed</h2>
                 <p className="text-gray-700">
-                  Our application for the 2025 Stanford Pre-Collegiate Summer Institutes is now closed. 
-                  To learn about future opportunities, join our mailing list.
+                  Our application for the 2025 AI Explorers Summer School is now closed. 
+                  
                 </p>
               </div>
+              /* Aplication Button
               <button className="bg-[#8C1515] text-white px-6 py-3 rounded hover:bg-[#66100F]">
-                Join Our Mailing List
+                Apply Now
               </button>
+              */
             </div>
           </div>
         </section>
@@ -189,9 +190,8 @@ function App() {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">2025 Program Dates</h2>
             <p className="mb-12 max-w-3xl">
-              Courses will be offered in two sessions this summer. Each session runs for two weeks, 
-              Monday–Friday and requires synchronous daily attendance. Note that students may only 
-              attend one course per summer.
+            
+              Intensive three-day courses will be offered for this summer. The sessions will run from June 28-30th and requires synchronous daily attendance.
             </p>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="flex gap-6">
@@ -199,8 +199,8 @@ function App() {
                   1
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Session One</h3>
-                  <p>Monday, June 16 – Friday, June 27, 2025</p>
+                  <h3 className="text-xl font-bold mb-2">June 28</h3>
+                  <p>Basics</p>
                 </div>
               </div>
               <div className="flex gap-6">
@@ -208,8 +208,17 @@ function App() {
                   2
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Session Two</h3>
-                  <p>Monday, July 7 – Friday, July 18, 2025</p>
+                  <h3 className="text-xl font-bold mb-2">June 29</h3>
+                  <p>Deeper Understanding</p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">June 30</h3>
+                  <p>Labs</p>
                 </div>
               </div>
             </div>
@@ -230,7 +239,7 @@ function App() {
                 <div className="text-gray-700">Courses Offered Each Summer</div>
               </div>
               <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">16</div>
+                <div className="text-[#8C1515] text-4xl font-bold mb-4">30</div>
                 <div className="text-gray-700">Average Class Size</div>
               </div>
               <div>
@@ -297,7 +306,7 @@ function App() {
           </div>
         </section>
 
-        {/* Find Yourself at Stanford */}
+        {/* Find Yourself at AI Explorers */}
         <section 
           className="relative h-[500px] bg-cover bg-center" 
           style={{
@@ -307,7 +316,7 @@ function App() {
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-center text-center">
             <div className="text-white">
-              <h2 className="text-5xl font-bold mb-12">Find Yourself at Stanford</h2>
+              <h2 className="text-5xl font-bold mb-12">Explore the Future</h2>
               <div className="flex gap-8">
                 <a href="#" className="text-xl border-2 border-white px-8 py-3 hover:bg-white hover:text-[#8C1515] transition-colors">
                   View Our Course Catalog
@@ -335,13 +344,13 @@ function App() {
               <div className="flex items-center">
                 <div>
                   <blockquote className="text-xl italic mb-6">
-                    "My SPCS experience was both exciting and enriching. I got to interact with people 
+                    "My experience was both exciting and enriching. I got to interact with people 
                     from all over the world, and I found peers who shared common interests. It was an 
                     incredible opportunity to help me grow as a person and develop new skills to use in 
                     the future."
                   </blockquote>
                   <p className="text-gray-700">
-                    - Stanford Pre-Collegiate Summer Institutes Participant, 2024
+                    - Participant, 2024
                   </p>
                 </div>
               </div>
@@ -375,12 +384,12 @@ function App() {
               <div>
                 <h3 className="text-lg font-bold mb-4">WHO WE ARE</h3>
                 <div className="mb-6">
-                  <div className="text-xl font-serif">Stanford</div>
-                  <div className="text-sm">Pre-Collegiate Studies</div>
+                  <div className="text-xl font-serif">AI Explorers</div>
+                  <div className="text-sm">Summer School</div>
                 </div>
                 <p className="text-sm mb-6">
-                  Stanford Pre-Collegiate Studies advances the education of academically motivated, 
-                  intellectually curious, pre-college students. We offer a variety of programs designed 
+                  AI Explorers advances the education of academically motivated, 
+                  intellectually curious, students. We offer a variety of programs designed 
                   to meet the needs of students everywhere.
                 </p>
                 <a href="#" className="text-sm hover:underline">Explore Our Programs</a>
@@ -389,7 +398,7 @@ function App() {
               <div>
                 <h3 className="text-lg font-bold mb-4">CONNECT WITH US</h3>
                 <div className="mb-4">
-                  <p>Stanford Pre-Collegiate Studies</p>
+                  <p>AI Explorers Summer School</p>
                   <p>Academy Hall</p>
                   <p>415 Broadway</p>
                   <p>Redwood City, CA 94063</p>
@@ -420,7 +429,7 @@ function App() {
               <div>
                 <h3 className="text-lg font-bold mb-4">SUPPORT US</h3>
                 <p className="mb-6">
-                  Your gift to Stanford Pre-Collegiate Studies benefits instructional and outreach activities.
+                  Your gift to AI Explorers benefits instructional and outreach activities.
                 </p>
                 <button className="bg-[#FDB515] text-black px-6 py-2 font-bold hover:bg-[#FDC545]">
                   MAKE A GIFT
@@ -431,9 +440,9 @@ function App() {
             {/* Bottom Footer */}
             <div className="border-t border-gray-700 pt-8">
               <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm mb-4">
-                <a href="#" className="hover:underline">Stanford Home</a>
+                <a href="#" className="hover:underline">AI Explorers Home</a>
                 <a href="#" className="hover:underline">Maps & Directions</a>
-                <a href="#" className="hover:underline">Search Stanford</a>
+                <a href="#" className="hover:underline">Search</a>
                 <a href="#" className="hover:underline">Emergency Info</a>
               </div>
               <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-gray-400">
@@ -445,7 +454,7 @@ function App() {
                 <a href="#" className="hover:underline">Accessibility</a>
               </div>
               <div className="text-sm text-gray-400 mt-4">
-                © Stanford University. Stanford, California 94305.
+                Website by Triniti Dungey
               </div>
             </div>
           </div>
