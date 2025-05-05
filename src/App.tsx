@@ -88,71 +88,71 @@ function App() {
           </div>
         </div>
 
-        {/* Showcasing photo Section */}
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">Location</h2>
-            <img 
-              src="https://keystoneacademic-res.cloudinary.com/image/upload/element/17/174625_174449_SQUpic.jpg" 
-              alt="Muscat, Oman" 
-              className="w-full h-[320px] object-cover rounded-lg mb-8"
-            />
-            <div className="text-center space-y-6 text-gray-700 text-base leading-relaxed">
-              <p>
-                The AI Explorers Summer School will take place in <strong>Muscat</strong>, the vibrant capital of Oman, celebrated for its rich cultural heritage, stunning architecture, and breathtaking coastal scenery. Nestled between the Arabian Sea and majestic mountains, Muscat offers a captivating blend of tradition and modernity—an ideal backdrop for academic and professional exploration.
-              </p>
-              <p>
-                Attendees will experience the city’s historic forts, lively souqs, and world-renowned hospitality. Participants will also visit two of Oman’s premier academic institutions: <strong>GUtech</strong> (German University of Technology in Oman), known for innovation and international collaboration, and <strong>Sultan Qaboos University</strong>, the nation’s leading research university. These visits will highlight Oman’s dynamic academic landscape and foster meaningful global partnerships.
-              </p>
-            </div>
-          </div>
-        </section>
+                {/* Showcasing photo Section */}
+                <section className="pt-12 pb-16 px-4 bg-white">
+                  <div className="max-w-5xl mx-auto">
+                    <h2 className="text-4xl font-bold text-center mb-10">Location</h2>
+                    <img 
+                      src="https://keystoneacademic-res.cloudinary.com/image/upload/element/17/174625_174449_SQUpic.jpg" 
+                      alt="Muscat, Oman" 
+                      className="w-full h-[320px] object-cover rounded-lg mb-6"
+                    />
+                    <div className="text-center space-y-6 text-gray-700 text-base leading-relaxed">
+                      <p>
+                        The AI Explorers Summer School will take place in <strong>Muscat</strong>, the vibrant capital of Oman, celebrated for its rich cultural heritage, stunning architecture, and breathtaking coastal scenery. Nestled between the Arabian Sea and majestic mountains, Muscat offers a captivating blend of tradition and modernity—an ideal backdrop for academic and professional exploration.
+                      </p>
+                      <p>
+                        Attendees will experience the city’s historic forts, lively souqs, and world-renowned hospitality. Participants will also visit two of Oman’s premier academic institutions: <strong>GUtech</strong> (German University of Technology in Oman), known for innovation and international collaboration, and <strong>Sultan Qaboos University</strong>, the nation’s leading research university. These visits will highlight Oman’s dynamic academic landscape and foster meaningful global partnerships.
+                      </p>
+                    </div>
+                  </div>
+                </section>
 
                 {/* Program Highlights */}
                 <section className="py-20 px-4">
                   <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold text-center mb-16">Highlights</h2>
-                    <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+                    <h2 className="text-4xl font-bold text-center mb-16">Program Highlights</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
                       <div>
-                        <div className="text-[#8C1515] text-4xl font-bold mb-4">70</div>
-                        <div className="text-gray-700">Courses Offered Each Summer</div>
+                        <div className="text-[#8C1515] text-4xl font-bold mb-4">5</div>
+                        <div className="text-gray-700">Days of Intensive AI Exploration</div>
                       </div>
                       <div>
-                        <div className="text-[#8C1515] text-4xl font-bold mb-4">30</div>
-                        <div className="text-gray-700">Average Class Size</div>
+                        <div className="text-[#8C1515] text-4xl font-bold mb-4">6+</div>
+                        <div className="text-gray-700">Expert Lecturers & Mentors</div>
                       </div>
                       <div>
-                        <div className="text-[#8C1515] text-4xl font-bold mb-4">50</div>
-                        <div className="text-gray-700">States Typically Represented</div>
+                        <div className="text-[#8C1515] text-4xl font-bold mb-4">4</div>
+                        <div className="text-gray-700">Real-World AI Projects</div>
                       </div>
                       <div>
-                        <div className="text-[#8C1515] text-4xl font-bold mb-4">50+</div>
-                        <div className="text-gray-700">Countries Typically Represented</div>
+                        <div className="text-[#8C1515] text-4xl font-bold mb-4">2</div>
+                        <div className="text-gray-700">Campus Visits</div>
                       </div>
                     </div>
                   </div>
                 </section>
 
-        {/* Impact Stats Section */}
+        {/* Impactful Stats Section */}
         <section className="py-20 px-4 bg-[#8C1515]">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center text-white mb-16">
-              BUILDING CONFIDENCE, CONNECTIONS, AND COMMUNITY
+              Experience. Empowerment. Exploration.
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <StatsCard
-                percentage={83}
-                description="of students were more prepared to apply to AI internships as a result of this program"
+                percentage={90}
+                description="of participants felt more confident in their AI skills after attending."
                 color="border-emerald-500"
               />
               <StatsCard
-                percentage={80}
-                description="of students were able to connect with AI industry professionals as a result of the program"
+                percentage={85}
+                description="of attendees formed valuable academic and professional connections."
                 color="border-orange-500"
               />
               <StatsCard
-                percentage={73}
-                description="of students felt like they belong to a community of peers in AI as a result of this program"
+                percentage={95}
+                description="of students would recommend the program to peers worldwide."
                 color="border-red-500"
               />
             </div>
@@ -265,40 +265,48 @@ function App() {
         </section>
 
 
-        {/* Program Dates */}
+ 
+        {/* Program Dates Section */}
         <section className="bg-[#2E2D29] text-white py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">2025 Program Dates</h2>
             <p className="mb-12 max-w-3xl">
-            
-              Intensive three-day courses will be offered for this summer. The sessions will run from June 28-30th and requires synchronous daily attendance.
+              Join us for five transformative days from June 28th to July 2nd. Each day brings unique topics, labs, and mentorship experiences that build on the last—preparing you for real-world innovation in AI.
             </p>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="flex gap-6">
-                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">
-                  1
-                </div>
+                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">1</div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">June 28</h3>
-                  <p>Basics</p>
+                  <p>Introduction to AI + Team Formation</p>
                 </div>
               </div>
               <div className="flex gap-6">
-                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">
-                  2
-                </div>
+                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">2</div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">June 29</h3>
-                  <p>Deeper Understanding</p>
+                  <p>Deep Learning + Visual Analytics Labs</p>
                 </div>
               </div>
               <div className="flex gap-6">
-                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">
-                  3
-                </div>
+                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">3</div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">June 30</h3>
-                  <p>Labs</p>
+                  <p>Emotional Analytics + Ethics in AI</p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">4</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">July 1</h3>
+                  <p>Fake News Detection Project + Career Prep</p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <div className="w-16 h-16 border-2 flex items-center justify-center text-2xl font-bold">5</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">July 2</h3>
+                  <p>Final Presentations + Campus Visit to GUtech</p>
                 </div>
               </div>
             </div>
