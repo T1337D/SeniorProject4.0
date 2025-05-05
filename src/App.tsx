@@ -118,6 +118,24 @@ function App() {
           </div>
         </section>
 
+        {/* Showcasing photo Section */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <img 
+              src="https://menafn.com/updates/pr/2019-06/20/MD_31cc0927-2image_story.jpg" 
+              alt="Stanford Campus" 
+              className="w-full h-[400px] object-cover rounded-lg mb-8"
+            />
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto text-center">
+              AI Explorers inspires students from around the world to explore 
+              academically rigorous learning opportunities through online and residential enrichment 
+              programs. Committed to our school's ideals of academic excellence, we foster 
+              inclusive and accessible communities that enhance learning for the next generation of 
+              global citizens.
+            </p>
+          </div>
+        </section>        
+
         {/* Impact Stats Section */}
         <section className="py-20 px-4 bg-[#8C1515]">
           <div className="max-w-7xl mx-auto">
