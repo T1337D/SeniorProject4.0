@@ -316,9 +316,9 @@ function App() {
           </div>
         </section>
 
-{/*
 
-        {/* Director Quote Section *
+
+        {/* Director Quote Section */}
         <section className="bg-[#8C1515] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-3xl font-light leading-relaxed mb-8">
@@ -331,11 +331,10 @@ function App() {
             <p className="text-lg">Director of Online Outreach Programs</p>
           </div>
         </section>
+       
 
-*/}        
 
-{/*
-        {/* Showcasing photo Section *
+        {/* Showcasing photo Section */}
         <section className="py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <img 
@@ -353,12 +352,11 @@ function App() {
           </div>
         </section>
 
-*/}
 
 
-{/*       
+  
 
-        {/* Student Testimonials *
+        {/* Student Testimonials */}
         <section className="bg-gray-100 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16">Hear from Our Students</h2>
@@ -387,12 +385,11 @@ function App() {
           </div>
         </section>
 
-*/}     
 
 
 
-{/*
-        {/* Photo Section *
+
+        {/* Photo Section */}
         <section className="bg-gray-100 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16">Photos</h2>
@@ -415,7 +412,7 @@ function App() {
           </div>
         </section>
 
-*/}
+
 
         {/* Map Section */}
         <section className="bg-[#8C1515] text-white py-20 px-4">
@@ -536,6 +533,7 @@ function App() {
               </div>
             </div>
 
+            
             {/* Bottom Footer */}
             <div className="border-t border-gray-700 pt-8">
               <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm mb-4">
