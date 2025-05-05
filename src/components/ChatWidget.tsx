@@ -13,7 +13,6 @@ export function ChatWidget() {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll when messages update
   useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -27,8 +26,26 @@ export function ChatWidget() {
     const lowerInput = userMessage.toLowerCase();
     let botReply = '';
 
-    // Friendly greetings and farewells
-    if (
+    // 🎯 Exact matches for suggested prompts
+    if (userMessage === 'When does the program start?') {
+      botReply =
+        'The program officially starts on June 28 and ends on June 30. We recommend logging in a few minutes early on Day 1!';
+    } else if (userMessage === 'How do I apply?') {
+      botReply =
+        'You can apply through the Admissions page on our website. Just fill out the application form and submit any required documents.';
+    } else if (userMessage === 'What is AI Explorers?') {
+      botReply =
+        'AI Explorers is a 3-day virtual summer program that introduces high school and early college students to the fundamentals of artificial intelligence and machine learning.';
+    } else if (userMessage === 'Is the program free?') {
+      botReply =
+        'Yes! The program is completely free for all accepted participants. There are no registration or tuition fees.';
+    } else if (userMessage === 'What is the daily schedule like?') {
+      botReply =
+        'Each day includes live lectures, interactive coding sessions, guest speakers from tech industries, and collaborative project work. You’ll stay engaged from start to finish!';
+    }
+
+    // 💬 Friendly greetings/farewells
+    else if (
       lowerInput.includes('hello') ||
       lowerInput.includes('hi') ||
       lowerInput.includes('hey') ||
@@ -49,7 +66,8 @@ export function ChatWidget() {
       botReply =
         'Goodbye! 😊 Feel free to come back if you have more questions. Have a great day!';
     }
-    // Static Q&A responses
+
+    // 🤖 Static Q&A fallback logic
     else if (
       lowerInput.includes('date') ||
       lowerInput.includes('when') ||
