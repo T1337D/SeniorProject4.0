@@ -27,10 +27,10 @@ function App() {
       <nav className="bg-white border-b shadow-sm py-4 px-4 fixed top-[32px] w-full z-40">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <a href="#" className="text-[#8C1515] font-serif text-2xl">Stanford</a>
+            <a href="#" className="text-[#8C1515] font-serif text-2xl">AI Explorers</a>
             <div className="text-gray-700">
-              <div className="text-sm">Pre-Collegiate</div>
-              <div className="text-sm">Summer Institutes</div>
+              <div className="text-sm"></div>
+              <div className="text-sm">Summer School</div>
             </div>
           </div>
           <div className="flex space-x-8">
