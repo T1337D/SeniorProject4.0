@@ -7,16 +7,14 @@ export function ChatWidget() {
     {
       type: 'bot',
       content:
-        "Welcome to AI Explorers! I'm an assistant here to help answer your questions about our programs. How can I assist you today?",
+        "Welcome to AI Explorers! I'm here to help with any questions you have about the 2025 Summer Camp in Oman. How can I assist you?",
     },
   ]);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   const handleSend = () => {
@@ -26,136 +24,64 @@ export function ChatWidget() {
     const lowerInput = userMessage.toLowerCase();
     let botReply = '';
 
-    // 🎯 Exact matches for suggested prompts
+    // Specific Answers
     if (userMessage === 'When does the program start?') {
-      botReply =
-        'The program officially starts on June 28 and ends on June 30. We recommend logging in a few minutes early on Day 1!';
+      botReply = 'The AI Explorers Summer Camp runs from June 28 to July 2, 2025. It is a 5-day in-person experience in Muscat, Oman.';
     } else if (userMessage === 'How do I apply?') {
-      botReply =
-        'You can apply through the Admissions page on our website. Just fill out the application form and submit any required documents.';
+      botReply = 'Admissions are currently closed for 2025. Check back later for updates or contact us through the website.';
     } else if (userMessage === 'What is AI Explorers?') {
-      botReply =
-        'AI Explorers is a 3-day virtual summer program that introduces high school and early college students to the fundamentals of artificial intelligence and machine learning.';
+      botReply = 'AI Explorers is a one-week summer program for undergraduates, designed to teach cutting-edge artificial intelligence topics through lectures, labs, and expert-led sessions.';
     } else if (userMessage === 'Is the program free?') {
-      botReply =
-        'Yes! The program is completely free for all accepted participants. There are no registration or tuition fees.';
+      botReply = 'There may be associated costs for the in-person experience. Please refer to the Admissions or Tuition section for full details.';
     } else if (userMessage === 'What is the daily schedule like?') {
-      botReply =
-        'Each day includes live lectures, interactive coding sessions, guest speakers from tech industries, and collaborative project work. You’ll stay engaged from start to finish!';
+      botReply = 'Each day includes morning lectures and discussions on key AI topics, followed by afternoon labs and project-based learning. The week concludes with a capstone AI project presentation.';
     }
 
-    // 💬 Friendly greetings/farewells
+    // Greeting / Farewell
     else if (
-      lowerInput.includes('hello') ||
-      lowerInput.includes('hi') ||
-      lowerInput.includes('hey') ||
-      lowerInput.includes('good morning') ||
-      lowerInput.includes('good afternoon') ||
-      lowerInput.includes('greetings')
+      lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('hey')
     ) {
-      botReply =
-        'Hello! 👋 I’m here to help you with anything related to the AI Explorers program!';
+      botReply = 'Hello! 👋 I’m here to help you with anything about the 2025 AI Summer Camp.';
     } else if (
-      lowerInput.includes('bye') ||
-      lowerInput.includes('goodbye') ||
-      lowerInput.includes('see you') ||
-      lowerInput.includes('farewell') ||
-      lowerInput.includes('thanks') ||
-      lowerInput.includes('thank you')
+      lowerInput.includes('bye') || lowerInput.includes('thank you') || lowerInput.includes('thanks')
     ) {
-      botReply =
-        'Goodbye! 😊 Feel free to come back if you have more questions. Have a great day!';
+      botReply = 'You’re welcome! Have a great day!';
     }
 
-    // 🤖 Static Q&A fallback logic
+    // Fallback keywords
     else if (
-      lowerInput.includes('date') ||
-      lowerInput.includes('when') ||
-      lowerInput.includes('start') ||
-      lowerInput.includes('begin')
+      lowerInput.includes('date') || lowerInput.includes('start') || lowerInput.includes('when')
     ) {
-      botReply =
-        'The AI Explorers Summer School runs from June 28 to June 30.';
+      botReply = 'The program will be held from June 28 to July 2, 2025.';
     } else if (
-      lowerInput.includes('location') ||
-      lowerInput.includes('where') ||
-      lowerInput.includes('held') ||
-      lowerInput.includes('hosted')
+      lowerInput.includes('location') || lowerInput.includes('muscat') || lowerInput.includes('oman')
     ) {
-      botReply =
-        'The program is hosted online, allowing students to participate from anywhere.';
+      botReply = 'The program is hosted in Muscat, Oman—a city known for its stunning architecture, coastal beauty, and welcoming culture.';
     } else if (
-      lowerInput.includes('apply') ||
-      lowerInput.includes('application') ||
-      lowerInput.includes('admission')
+      lowerInput.includes('cost') || lowerInput.includes('fee') || lowerInput.includes('tuition')
     ) {
-      botReply =
-        'You can apply through our website on the Admissions page. Ensure to submit your application before the deadline.';
+      botReply = 'Please check the Tuition and Financial Aid section for the most accurate information on program costs.';
     } else if (
-      lowerInput.includes('cost') ||
-      lowerInput.includes('price') ||
-      lowerInput.includes('fee') ||
-      lowerInput.includes('tuition')
+      lowerInput.includes('faculty') || lowerInput.includes('professor') || lowerInput.includes('speaker')
     ) {
-      botReply = 'The program is free for all admitted students.';
+      botReply = 'You’ll hear from international professors and researchers specializing in AI topics like Emotional Analytics, Visual Analytics, Deep Learning, and more.';
     } else if (
-      lowerInput.includes('ai explorers') ||
-      lowerInput.includes('what is') ||
-      lowerInput.includes('program about')
+      lowerInput.includes('project') || lowerInput.includes('capstone') || lowerInput.includes('final')
     ) {
-      botReply =
-        'AI Explorers is a 3-day summer program where students learn about artificial intelligence, coding, and real-world tech skills.';
+      botReply = 'You’ll work on a final AI project throughout the week and present it on the last day.';
     } else if (
-      lowerInput.includes('age') ||
-      lowerInput.includes('grade') ||
-      lowerInput.includes('who can join') ||
-      lowerInput.includes('eligibility')
+      lowerInput.includes('contact') || lowerInput.includes('email')
     ) {
-      botReply =
-        'The program is open to high school juniors, seniors, and early college students interested in technology.';
-    } else if (
-      lowerInput.includes('schedule') ||
-      lowerInput.includes('daily') ||
-      lowerInput.includes('routine') ||
-      lowerInput.includes('agenda')
-    ) {
-      botReply =
-        'Each day includes lectures, hands-on coding sessions, guest speakers, and project work.';
-    } else if (
-      lowerInput.includes('speaker') ||
-      lowerInput.includes('guest') ||
-      lowerInput.includes('talk') ||
-      lowerInput.includes('lecturer')
-    ) {
-      botReply =
-        'Our guest speakers include industry professionals and professors specializing in AI, computer science, and robotics.';
-    } else if (
-      lowerInput.includes('project') ||
-      lowerInput.includes('final') ||
-      lowerInput.includes('teamwork') ||
-      lowerInput.includes('collaboration')
-    ) {
-      botReply =
-        'You’ll work on a group project to apply AI concepts in a real-world challenge, presented on the last day of the program.';
-    } else if (
-      lowerInput.includes('contact') ||
-      lowerInput.includes('question') ||
-      lowerInput.includes('email') ||
-      lowerInput.includes('reach out')
-    ) {
-      botReply =
-        'For questions, please visit the "Contact Us" section at the top of the site. We’d love to help!';
+      botReply = 'Please visit the "Contact Us" link at the top of the site for questions or support.';
     } else {
-      botReply =
-        "I'm not sure how to answer that yet, but feel free to explore the website for more information!";
+      botReply = "I'm not sure how to answer that yet. Try checking the main website or asking something else!";
     }
 
-    setMessages((prev) => [
+    setMessages(prev => [
       ...prev,
       { type: 'user', content: userMessage },
       { type: 'bot', content: botReply },
     ]);
-
     setInput('');
   };
 
@@ -166,10 +92,7 @@ export function ChatWidget() {
           {/* Header */}
           <div className="bg-[#8C1515] text-white p-4 flex justify-between items-center">
             <h3 className="font-semibold">AI Explorers Assistant</h3>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-white hover:text-gray-200"
-            >
+            <button onClick={() => setIsOpen(false)} className="text-white hover:text-gray-200">
               <X size={20} />
             </button>
           </div>
@@ -180,9 +103,7 @@ export function ChatWidget() {
               <div
                 key={index}
                 className={`mb-4 ${
-                  message.type === 'bot'
-                    ? 'bg-[#8C1515] text-white'
-                    : 'bg-gray-200 text-gray-800'
+                  message.type === 'bot' ? 'bg-[#8C1515] text-white' : 'bg-gray-200 text-gray-800'
                 } p-3 rounded-lg max-w-[80%] ${
                   message.type === 'bot' ? 'mr-auto' : 'ml-auto'
                 }`}
