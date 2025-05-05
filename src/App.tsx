@@ -79,6 +79,9 @@ function App() {
               exciting topics such as Emotional Analytics, Fake News Detection, Deep Learning, and Visual
               Analytics, all while working with peers who share your passion for innovation.
               </p>
+              <p>
+                
+              </p>
               <p className="text-xl max-w-3xl">
                 Whether you are just starting your journey in AI or looking to deepen your understanding, this
                 camp will provide you with the tools, knowledge, and inspiration to take your skills to the next
