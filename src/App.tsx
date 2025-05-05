@@ -377,25 +377,6 @@ function App() {
           </div>
         </section>        
 
-        {/* Mailing List Section */}
-        <section id="mailinglist" className="bg-[#8C1515] py-20 px-4">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <Mail className="w-16 h-16 mx-auto mb-6" />
-            <h2 className="text-4xl font-bold mb-6">Join Our Mailing List</h2>
-            <p className="text-xl mb-8">Stay updated with program announcements and deadlines</p>
-            <form className="flex flex-col md:flex-row gap-4 justify-center">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-6 py-3 rounded-full text-gray-900 w-full md:w-96"
-              />
-              <button className="bg-white text-[#8C1515] px-8 py-3 rounded-full font-semibold hover:bg-gray-100">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </section>
-
 
         {/* Photo Section */}
         <section className="bg-gray-100 py-20 px-4">
@@ -419,6 +400,29 @@ function App() {
             </div>
           </div>
         </section>
+
+
+{/* 
+        {/* Mailing List Section }
+        <section id="mailinglist" className="bg-[#8C1515] py-20 px-4">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <Mail className="w-16 h-16 mx-auto mb-6" />
+            <h2 className="text-4xl font-bold mb-6">Join Our Mailing List</h2>
+            <p className="text-xl mb-8">Stay updated with program announcements and deadlines</p>
+            <form className="flex flex-col md:flex-row gap-4 justify-center">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="px-6 py-3 rounded-full text-gray-900 w-full md:w-96"
+              />
+              <button className="bg-white text-[#8C1515] px-8 py-3 rounded-full font-semibold hover:bg-gray-100">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </section>        
+
+*/}
 
 
         {/* Footer */}
