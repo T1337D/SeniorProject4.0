@@ -397,10 +397,10 @@ function App() {
         </section>
 
 
-        {/* Student Testimonials */}
+        {/* Photo Section */}
         <section className="bg-gray-100 py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">Hear from Our Students</h2>
+            <h2 className="text-4xl font-bold text-center mb-16">Photos</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <img 
@@ -415,20 +415,6 @@ function App() {
                   alt="Student studying" 
                   className="w-full h-96 object-cover rounded-lg"
                 />
-              </div>
-              <div className="flex items-center">
-                <div>
-                <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80" 
-                  alt="Student studying" 
-                  className="w-full h-96 object-cover rounded-lg"
-                />
-              </div>
-                  <p className="text-gray-700">
-                    - Participant, 2024
-                  </p>
-                </div>
               </div>
             </div>
           </div>
