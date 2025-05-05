@@ -340,10 +340,10 @@ function App() {
         {/* Map Section*/}
         <section className="bg-[#8C1515] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Website Visitors</h2>
-            
+            <blockquote className="text-3xl font-light leading-relaxed mb-8">
+              Website Visitors
             <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=753&t=tt&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
-
+            </blockquote>
 
           </div>
         </section>
