@@ -7,14 +7,13 @@ import { ChatWidget } from './components/ChatWidget';
 import { speakers } from './data/speakers';
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Top Navigation - Fixed */}
       <nav className="bg-[#8C1515] text-white py-2 px-4 fixed top-0 w-full z-50">
         <div className="max-w-7xl mx-auto flex justify-end space-x-6 text-sm">
           <a href="#" className="hover:text-gray-200">Explore Our Programs</a>
+
           <a href="#" className="hover:text-gray-200">Contact Us</a>
           <a href="#" className="hover:text-gray-200">Support Us</a>
           <button className="hover:text-gray-200 flex items-center">
@@ -23,32 +22,23 @@ function App() {
         </div>
       </nav>
 
-      {/* Main Navigation - Collapsible */}
+      {/* Main Navigation - Fixed */}
       <nav className="bg-white border-b shadow-sm py-4 px-4 fixed top-[32px] w-full z-40">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <a href="#" className="text-[#8C1515] font-serif text-2xl">AI Explorers</a>
             <div className="text-gray-700">
+              <div className="text-sm"></div>
               <div className="text-sm">Summer School</div>
             </div>
           </div>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-[#8C1515] focus:outline-none"
-            >
-              <Menu size={28} />
-            </button>
-          </div>
-
-          <div className={`flex-col md:flex md:flex-row md:space-x-8 ${menuOpen ? 'flex' : 'hidden'} md:items-center w-full md:w-auto mt-4 md:mt-0`}> 
-            <a href="#" className="block md:inline text-gray-700 hover:text-[#8C1515] px-2 py-1">About</a>
-            <a href="#" className="block md:inline text-gray-700 hover:text-[#8C1515] px-2 py-1">Courses</a>
-            <a href="#" className="block md:inline text-gray-700 hover:text-[#8C1515] px-2 py-1">Student Life</a>
-            <a href="#" className="block md:inline text-gray-700 hover:text-[#8C1515] px-2 py-1">Admissions</a>
-            <a href="#" className="block md:inline text-gray-700 hover:text-[#8C1515] px-2 py-1">Tuition and Financial Aid</a>
-            <a href="#" className="block md:inline text-gray-700 hover:text-[#8C1515] px-2 py-1">Questions?</a>
+          <div className="flex space-x-8">
+            <a href="#" className="text-gray-700 hover:text-[#8C1515]">About</a>
+            <a href="#" className="text-gray-700 hover:text-[#8C1515]">Courses</a>
+            <a href="#" className="text-gray-700 hover:text-[#8C1515]">Student Life</a>
+            <a href="#" className="text-gray-700 hover:text-[#8C1515]">Admissions</a>
+            <a href="#" className="text-gray-700 hover:text-[#8C1515]">Tuition and Financial Aid</a>
+            <a href="#" className="text-gray-700 hover:text-[#8C1515]">Questions?</a>
           </div>
         </div>
       </nav>
