@@ -72,9 +72,17 @@ function App() {
             <div className="max-w-7xl mx-auto px-4 text-white">
               <h1 className="text-5xl font-bold mb-6">Expand Your Intellectual Horizons</h1>
               <p className="text-xl max-w-3xl">
-                AI Explorers Summer School inspires academically motivated Pre-Collegiate and Collegiate students 
-                on their journey to becoming leaders that will transform the future. In an inclusive classroom setting without the pressure of grades,
-                 students explore advanced study and build bonds with peers from around the world."
+              Are you ready to dive into the fascinating world of Artificial Intelligence? Our one-week Summer
+              Camp is designed for undergraduate students eager to explore cutting-edge AI concepts and gain 
+              valuable hands-on experience. Throughout the week, you will learn the fundamentals of AI,
+              machine learning, and deep learning, and apply your knowledge to real-world projects. Engage in
+              exciting topics such as Emotional Analytics, Fake News Detection, Deep Learning, and Visual
+              Analytics, all while working with peers who share your passion for innovation.
+
+              Whether you are just starting your journey in AI or looking to deepen your understanding, this
+              camp will provide you with the tools, knowledge, and inspiration to take your skills to the next
+              level. Don’t miss this opportunity to build your expertise, strengthen your resume, and be part of
+              the future of technology.
               </p>
             </div>
           </div>
@@ -194,6 +202,57 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* Porgram Overview */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Program Schedule</h2>
+              <p className="text-gray-700 max-w-3xl">
+                AI Explorers Summer School offers a dynamic blend of foundational learning, hands-on application, and professional growth—designed to prepare students for real-world success in the field of artificial intelligence.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-16">
+              <div className="flex gap-6">
+                <BookOpen className="w-12 h-12 text-[#8C1515] flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Foundations to Frontiers</h3>
+                  <p className="text-gray-700">
+                    Start each day exploring a new area of artificial intelligence—from core principles to advanced topics like Deep Learning, Emotional Analytics, Fake News Detection, and Visual Analytics. Students gain a broad and solid understanding of how AI is shaping the world.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <Globe2 className="w-12 h-12 text-[#8C1515] flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Hands-On Labs & Projects</h3>
+                  <p className="text-gray-700">
+                    Afternoons are dedicated to building. Students apply concepts learned in the morning through guided labs and real-world projects—culminating in a custom AI project they can showcase with pride.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <Monitor className="w-12 h-12 text-[#8C1515] flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Career Prep & Professional Insights</h3>
+                  <p className="text-gray-700">
+                    Throughout the week, students attend career talks, receive resume advice tailored for AI internships, and learn how to navigate the growing tech landscape through insider tips and resources.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <Award className="w-12 h-12 text-[#8C1515] flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Networking & Community</h3>
+                  <p className="text-gray-700">
+                    From day one, students interact with faculty and industry professionals, gaining valuable connections and insight. The program fosters a collaborative environment where curiosity is celebrated and lasting bonds are formed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>        
 
         {/* Program Schedule Section */}
         <section className="py-20 px-4 bg-gray-50">
