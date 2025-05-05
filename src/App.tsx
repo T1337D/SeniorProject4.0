@@ -119,21 +119,24 @@ function App() {
         </section>
 
         {/* Showcasing photo Section */}
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-5xl mx-auto">
             <img 
               src="https://keystoneacademic-res.cloudinary.com/image/upload/element/17/174625_174449_SQUpic.jpg" 
               alt="Muscat, Oman" 
-              className="w-full h-[400px] object-cover rounded-lg mb-8"
+              className="w-full h-[320px] object-cover rounded-lg mb-8"
             />
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-6">
-              The AI Explorers Summer School will take place in <strong>Muscat</strong>, the vibrant capital of Oman, celebrated for its rich cultural heritage, stunning architecture, and breathtaking coastal scenery. Nestled between the Arabian Sea and majestic mountains, Muscat offers a captivating blend of tradition and modernity—an ideal backdrop for academic and professional exploration.
-            </p>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-6">
-              Attendees will experience the city’s historic forts, lively souqs, and world-renowned hospitality. Participants will also visit two of Oman’s premier academic institutions: <strong>GUtech</strong> (German University of Technology in Oman), known for innovation and international collaboration, and <strong>Sultan Qaboos University</strong>, the nation’s leading research university. These visits will highlight Oman’s dynamic academic landscape and foster meaningful global partnerships.
-            </p>
+            <div className="text-center space-y-6 text-gray-700 text-base leading-relaxed">
+              <p>
+                The AI Explorers Summer School will take place in <strong>Muscat</strong>, the vibrant capital of Oman, celebrated for its rich cultural heritage, stunning architecture, and breathtaking coastal scenery. Nestled between the Arabian Sea and majestic mountains, Muscat offers a captivating blend of tradition and modernity—an ideal backdrop for academic and professional exploration.
+              </p>
+              <p>
+                Attendees will experience the city’s historic forts, lively souqs, and world-renowned hospitality. Participants will also visit two of Oman’s premier academic institutions: <strong>GUtech</strong> (German University of Technology in Oman), known for innovation and international collaboration, and <strong>Sultan Qaboos University</strong>, the nation’s leading research university. These visits will highlight Oman’s dynamic academic landscape and foster meaningful global partnerships.
+              </p>
+            </div>
           </div>
-        </section>     
+        </section>
+ 
 
         {/* Impact Stats Section */}
         <section className="py-20 px-4 bg-[#8C1515]">
