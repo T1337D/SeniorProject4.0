@@ -88,39 +88,10 @@ function App() {
           </div>
         </div>
 
-
-        {/* Program Highlights */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-center mb-16">Highlights</h2>
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">8-11</div>
-                <div className="text-gray-700">Current Grade Level</div>
-              </div>
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">70</div>
-                <div className="text-gray-700">Courses Offered Each Summer</div>
-              </div>
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">30</div>
-                <div className="text-gray-700">Average Class Size</div>
-              </div>
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">50</div>
-                <div className="text-gray-700">States Typically Represented</div>
-              </div>
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">50+</div>
-                <div className="text-gray-700">Countries Typically Represented</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Showcasing photo Section */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-16">Location</h2>
             <img 
               src="https://keystoneacademic-res.cloudinary.com/image/upload/element/17/174625_174449_SQUpic.jpg" 
               alt="Muscat, Oman" 
@@ -136,7 +107,31 @@ function App() {
             </div>
           </div>
         </section>
- 
+
+                {/* Program Highlights */}
+                <section className="py-20 px-4">
+                  <div className="max-w-7xl mx-auto text-center">
+                    <h2 className="text-4xl font-bold text-center mb-16">Highlights</h2>
+                    <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+                      <div>
+                        <div className="text-[#8C1515] text-4xl font-bold mb-4">70</div>
+                        <div className="text-gray-700">Courses Offered Each Summer</div>
+                      </div>
+                      <div>
+                        <div className="text-[#8C1515] text-4xl font-bold mb-4">30</div>
+                        <div className="text-gray-700">Average Class Size</div>
+                      </div>
+                      <div>
+                        <div className="text-[#8C1515] text-4xl font-bold mb-4">50</div>
+                        <div className="text-gray-700">States Typically Represented</div>
+                      </div>
+                      <div>
+                        <div className="text-[#8C1515] text-4xl font-bold mb-4">50+</div>
+                        <div className="text-gray-700">Countries Typically Represented</div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
 
         {/* Impact Stats Section */}
         <section className="py-20 px-4 bg-[#8C1515]">
