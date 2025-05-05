@@ -396,14 +396,14 @@ function App() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80" 
+                  src="https://epe.brightspotcdn.com/dims4/default/89dd524/2147483647/strip/true/crop/4969x3372+0+0/resize/840x570!/quality/90/?url=https%3A%2F%2Fepe-brightspot.s3.us-east-1.amazonaws.com%2F26%2Fda%2Fd161ce05474e899bdad392635325%2Fafrican-american-girl-technology.jpg" 
                   alt="Student studying" 
                   className="w-full h-96 object-cover rounded-lg"
                 />
               </div>
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80" 
+                  src="https://www.usnews.com/dims4/USNEWS/80b62a8/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2Fca%2F4f%2Fca428fdf4eba9a374d5ee4df2fb6%2F170509-stem-stock.jpg" 
                   alt="Student studying" 
                   className="w-full h-96 object-cover rounded-lg"
                 />
@@ -533,7 +533,7 @@ function App() {
               </div>
             </div>
 
-            
+
             {/* Bottom Footer */}
             <div className="border-t border-gray-700 pt-8">
               <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm mb-4">
