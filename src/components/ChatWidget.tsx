@@ -3,12 +3,22 @@ import { MessageSquare, X } from 'lucide-react';
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages] = useState([
+  const [messages, setMessages] = useState([
     {
       type: 'bot',
-      content: 'Welcome to Stanford Pre-Collegiate Summer Institutes! I\'m an AI assistant here to help answer your questions about our programs. How can I assist you today?'
-    }
+      content:
+        "Welcome to Stanford Pre-Collegiate Summer Institutes! I'm an AI assistant here to help answer your questions about our programs. How can I assist you today?",
+    },
   ]);
+  const [input, setInput] = useState('');
+
+  const handleSend = () => {
+    if (!input.trim()) return;
+
+    // Add user's message to the chat
+    setMessages([...messages, { type: 'user', content: input.trim() }]);
+    setInput('');
+  };
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
@@ -17,7 +27,7 @@ export function ChatWidget() {
           {/* Header */}
           <div className="bg-[#8C1515] text-white p-4 flex justify-between items-center">
             <h3 className="font-semibold">Stanford Assistant</h3>
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="text-white hover:text-gray-200"
             >
@@ -31,8 +41,8 @@ export function ChatWidget() {
               <div
                 key={index}
                 className={`mb-4 ${
-                  message.type === 'bot' 
-                    ? 'bg-[#8C1515] text-white' 
+                  message.type === 'bot'
+                    ? 'bg-[#8C1515] text-white'
                     : 'bg-gray-200 text-gray-800'
                 } p-3 rounded-lg max-w-[80%] ${
                   message.type === 'bot' ? 'mr-auto' : 'ml-auto'
@@ -49,9 +59,15 @@ export function ChatWidget() {
               <input
                 type="text"
                 placeholder="Type your message..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                 className="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8C1515]"
               />
-              <button className="bg-[#8C1515] text-white px-4 py-2 rounded-lg hover:bg-[#66100F]">
+              <button
+                onClick={handleSend}
+                className="bg-[#8C1515] text-white px-4 py-2 rounded-lg hover:bg-[#66100F]"
+              >
                 Send
               </button>
             </div>
