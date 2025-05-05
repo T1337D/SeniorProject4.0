@@ -341,10 +341,9 @@ function App() {
         <section className="bg-[#8C1515] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-3xl font-light leading-relaxed mb-8">
-              Website Visitors
-              <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=753&t=tt&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+              "Map"
+              <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=753&t=n&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
             </blockquote>
-
           </div>
         </section>
 
