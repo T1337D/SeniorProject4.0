@@ -66,45 +66,6 @@ function App() {
           </div>
         </div>
 
-        {/* Program Schedule Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <ProgramSchedule />
-          </div>
-        </section>
-
-        {/* Director Quote Section */}
-        <section className="bg-[#8C1515] text-white py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <blockquote className="text-3xl font-light leading-relaxed mb-8">
-              "Stanford Pre-Collegiate Studies inspires academically motivated Pre-Collegiate students 
-              on their journey to becoming leaders that will transform the future. In an inclusive 
-              classroom setting without the pressure of grades, students explore advanced study and 
-              build bonds with peers from around the world."
-            </blockquote>
-            <p className="text-xl font-semibold">Sara Mumolo</p>
-            <p className="text-lg">Director of Online Outreach Programs</p>
-          </div>
-        </section>
-
-        {/* Stanford Campus Image Section */}
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <img 
-              src="https://images.unsplash.com/photo-1564399580075-5dfe19c205f3?auto=format&fit=crop&q=80" 
-              alt="Stanford Campus" 
-              className="w-full h-[400px] object-cover rounded-lg mb-8"
-            />
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto text-center">
-              Stanford Pre-Collegiate Studies (SPCS) inspires students from around the world to explore 
-              academically rigorous learning opportunities through online and residential enrichment 
-              programs. Committed to Stanford University's ideals of academic excellence, SPCS fosters 
-              inclusive and accessible communities that enhance learning for the next generation of 
-              global citizens.
-            </p>
-          </div>
-        </section>
-
         {/* Program Features */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -165,6 +126,95 @@ function App() {
           </div>
         </section>
 
+        {/* Program Highlights */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-center mb-16">Highlights</h2>
+            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+              <div>
+                <div className="text-[#8C1515] text-4xl font-bold mb-4">8-11</div>
+                <div className="text-gray-700">Current Grade Level</div>
+              </div>
+              <div>
+                <div className="text-[#8C1515] text-4xl font-bold mb-4">70</div>
+                <div className="text-gray-700">Courses Offered Each Summer</div>
+              </div>
+              <div>
+                <div className="text-[#8C1515] text-4xl font-bold mb-4">30</div>
+                <div className="text-gray-700">Average Class Size</div>
+              </div>
+              <div>
+                <div className="text-[#8C1515] text-4xl font-bold mb-4">50</div>
+                <div className="text-gray-700">States Typically Represented</div>
+              </div>
+              <div>
+                <div className="text-[#8C1515] text-4xl font-bold mb-4">50+</div>
+                <div className="text-gray-700">Countries Typically Represented</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Impact Stats Section */}
+        <section className="py-20 px-4 bg-[#8C1515]">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-center text-white mb-16">
+              BUILDING CONFIDENCE, CONNECTIONS, AND COMMUNITY
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <StatsCard
+                percentage={83}
+                description="of students were more prepared to apply to AI internships as a result of this program"
+                color="border-emerald-500"
+              />
+              <StatsCard
+                percentage={80}
+                description="of students were able to connect with AI industry professionals as a result of the program"
+                color="border-orange-500"
+              />
+              <StatsCard
+                percentage={73}
+                description="of students felt like they belong to a community of peers in AI as a result of this program"
+                color="border-red-500"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Program Schedule Section */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <ProgramSchedule />
+          </div>
+        </section>        
+
+        {/* Speakers & Mentors Section */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-center mb-16">Meet the Speakers</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
+              {speakers.map((speaker) => (
+                <SpeakerTooltip
+                  key={speaker.id}
+                  name={speaker.name}
+                  title={speaker.title}
+                  bio={speaker.bio}
+                >
+                  <div className="cursor-pointer">
+                    <img
+                      src={speaker.image}
+                      alt={speaker.name}
+                      className="w-full aspect-square object-cover rounded-lg mb-3"
+                    />
+                    <h3 className="font-semibold text-lg">{speaker.name}</h3>
+                  </div>
+                </SpeakerTooltip>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
         {/* Application Status */}
         <section className="bg-[#00505C] py-12 px-4">
           <div className="max-w-7xl mx-auto">
@@ -184,6 +234,7 @@ function App() {
             </div>
           </div>
         </section>
+
 
         {/* Program Dates */}
         <section className="bg-[#2E2D29] text-white py-20 px-4">
@@ -225,86 +276,41 @@ function App() {
           </div>
         </section>
 
-        {/* Program Highlights */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-center mb-16">Highlights</h2>
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">8-11</div>
-                <div className="text-gray-700">Current Grade Level</div>
-              </div>
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">70</div>
-                <div className="text-gray-700">Courses Offered Each Summer</div>
-              </div>
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">30</div>
-                <div className="text-gray-700">Average Class Size</div>
-              </div>
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">50</div>
-                <div className="text-gray-700">States Typically Represented</div>
-              </div>
-              <div>
-                <div className="text-[#8C1515] text-4xl font-bold mb-4">50+</div>
-                <div className="text-gray-700">Countries Typically Represented</div>
-              </div>
-            </div>
+        {/* Director Quote Section */}
+        <section className="bg-[#8C1515] text-white py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <blockquote className="text-3xl font-light leading-relaxed mb-8">
+              "Stanford Pre-Collegiate Studies inspires academically motivated Pre-Collegiate students 
+              on their journey to becoming leaders that will transform the future. In an inclusive 
+              classroom setting without the pressure of grades, students explore advanced study and 
+              build bonds with peers from around the world."
+            </blockquote>
+            <p className="text-xl font-semibold">Sara Mumolo</p>
+            <p className="text-lg">Director of Online Outreach Programs</p>
           </div>
         </section>
 
-        {/* Speakers & Mentors Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-center mb-16">Meet the Speakers</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-              {speakers.map((speaker) => (
-                <SpeakerTooltip
-                  key={speaker.id}
-                  name={speaker.name}
-                  title={speaker.title}
-                  bio={speaker.bio}
-                >
-                  <div className="cursor-pointer">
-                    <img
-                      src={speaker.image}
-                      alt={speaker.name}
-                      className="w-full aspect-square object-cover rounded-lg mb-3"
-                    />
-                    <h3 className="font-semibold text-lg">{speaker.name}</h3>
-                  </div>
-                </SpeakerTooltip>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Impact Stats Section */}
-        <section className="py-20 px-4 bg-[#8C1515]">
+        {/* Stanford Campus Image Section */}
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-white mb-16">
-              BUILDING CONFIDENCE, CONNECTIONS, AND COMMUNITY
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <StatsCard
-                percentage={83}
-                description="of students were more prepared to apply to AI internships as a result of this program"
-                color="border-emerald-500"
-              />
-              <StatsCard
-                percentage={80}
-                description="of students were able to connect with AI industry professionals as a result of the program"
-                color="border-orange-500"
-              />
-              <StatsCard
-                percentage={73}
-                description="of students felt like they belong to a community of peers in AI as a result of this program"
-                color="border-red-500"
-              />
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1564399580075-5dfe19c205f3?auto=format&fit=crop&q=80" 
+              alt="Stanford Campus" 
+              className="w-full h-[400px] object-cover rounded-lg mb-8"
+            />
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto text-center">
+              Stanford Pre-Collegiate Studies (SPCS) inspires students from around the world to explore 
+              academically rigorous learning opportunities through online and residential enrichment 
+              programs. Committed to Stanford University's ideals of academic excellence, SPCS fosters 
+              inclusive and accessible communities that enhance learning for the next generation of 
+              global citizens.
+            </p>
           </div>
         </section>
+
+
+
+
 
         {/* Find Yourself at AI Explorers */}
         <section 
