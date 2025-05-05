@@ -176,11 +176,11 @@ function App() {
                   
                 </p>
               </div>
-              /* Aplication Button
+              {/* Aplication Button
               <button className="bg-[#8C1515] text-white px-6 py-3 rounded hover:bg-[#66100F]">
                 Apply Now
               </button>
-              */
+              */}
             </div>
           </div>
         </section>
