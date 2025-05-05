@@ -1,177 +1,233 @@
-import * as Tabs from '@radix-ui/react-tabs';
-import { clsx } from 'clsx';
+import React, { useState, useRef, useEffect } from 'react';
+import { MessageSquare, X } from 'lucide-react';
 
-interface ScheduleItem {
-  time: string;
-  title: string;
-  speakers?: Array<{
-    name: string;
-    affiliation: string;
-  }>;
-  duration?: string;
-}
+export function ChatWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    {
+      type: 'bot',
+      content:
+        "Welcome to AI Explorers! I'm an assistant here to help answer your questions about our programs. How can I assist you today?",
+    },
+  ]);
+  const [input, setInput] = useState('');
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-interface DaySchedule {
-  date: string;
-  items: ScheduleItem[];
-}
+  // Auto-scroll when messages update
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
 
-const schedule: DaySchedule[] = [
-  {
-    date: 'Mar 28',
-    items: [
-      {
-        time: '9:30-10:30am',
-        title: 'Introduction',
-        speakers: [
-          {
-            name: 'Dr. Sarah Chen',
-            affiliation: 'Stanford University'
-          }
-        ],
-        duration: '30 mins'
-      },
-      {
-        time: '10:30-11:00am',
-        title: 'Break'
-      },
-      {
-        time: '11:00am-1:00pm',
-        title: 'Machine Learning Fundamentals',
-        speakers: [
-          {
-            name: 'Prof. Michael Zhang',
-            affiliation: 'Stanford AI Lab'
-          }
-        ],
-        duration: '2 hours'
-      }
-    ]
-  },
-  {
-    date: 'Mar 29',
-    items: [
-      {
-        time: '9:30-11:00am',
-        title: 'Advanced AI Concepts',
-        speakers: [
-          {
-            name: 'Dr. Emily Johnson',
-            affiliation: 'Stanford University'
-          }
-        ],
-        duration: '1.5 hours'
-      },
-      {
-        time: '11:00-11:30am',
-        title: 'Break'
-      },
-      {
-        time: '11:30am-1:00pm',
-        title: 'Practical Applications',
-        speakers: [
-          {
-            name: 'Prof. David Lee',
-            affiliation: 'Stanford AI Lab'
-          }
-        ],
-        duration: '1.5 hours'
-      }
-    ]
-  },
-  {
-    date: 'Mar 30',
-    items: [
-      {
-        time: '9:30-11:00am',
-        title: 'Future of AI',
-        speakers: [
-          {
-            name: 'Dr. Rachel Brown',
-            affiliation: 'Stanford University'
-          }
-        ],
-        duration: '1.5 hours'
-      },
-      {
-        time: '11:00-11:30am',
-        title: 'Break'
-      },
-      {
-        time: '11:30am-1:00pm',
-        title: 'Closing Remarks',
-        speakers: [
-          {
-            name: 'Prof. Thomas Wilson',
-            affiliation: 'Stanford AI Lab'
-          }
-        ],
-        duration: '1.5 hours'
-      }
-    ]
-  }
-];
+  const handleSend = () => {
+    if (!input.trim()) return;
 
-export function ProgramSchedule() {
+    const userMessage = input.trim();
+    const lowerInput = userMessage.toLowerCase();
+    let botReply = '';
+
+    // Friendly greetings and farewells
+    if (
+      lowerInput.includes('hello') ||
+      lowerInput.includes('hi') ||
+      lowerInput.includes('hey') ||
+      lowerInput.includes('good morning') ||
+      lowerInput.includes('good afternoon') ||
+      lowerInput.includes('greetings')
+    ) {
+      botReply =
+        'Hello! 👋 I’m here to help you with anything related to the AI Explorers program!';
+    } else if (
+      lowerInput.includes('bye') ||
+      lowerInput.includes('goodbye') ||
+      lowerInput.includes('see you') ||
+      lowerInput.includes('farewell') ||
+      lowerInput.includes('thanks') ||
+      lowerInput.includes('thank you')
+    ) {
+      botReply =
+        'Goodbye! 😊 Feel free to come back if you have more questions. Have a great day!';
+    }
+    // Static Q&A responses
+    else if (
+      lowerInput.includes('date') ||
+      lowerInput.includes('when') ||
+      lowerInput.includes('start') ||
+      lowerInput.includes('begin')
+    ) {
+      botReply =
+        'The AI Explorers Summer School runs from June 28 to June 30.';
+    } else if (
+      lowerInput.includes('location') ||
+      lowerInput.includes('where') ||
+      lowerInput.includes('held') ||
+      lowerInput.includes('hosted')
+    ) {
+      botReply =
+        'The program is hosted online, allowing students to participate from anywhere.';
+    } else if (
+      lowerInput.includes('apply') ||
+      lowerInput.includes('application') ||
+      lowerInput.includes('admission')
+    ) {
+      botReply =
+        'You can apply through our website on the Admissions page. Ensure to submit your application before the deadline.';
+    } else if (
+      lowerInput.includes('cost') ||
+      lowerInput.includes('price') ||
+      lowerInput.includes('fee') ||
+      lowerInput.includes('tuition')
+    ) {
+      botReply = 'The program is free for all admitted students.';
+    } else if (
+      lowerInput.includes('ai explorers') ||
+      lowerInput.includes('what is') ||
+      lowerInput.includes('program about')
+    ) {
+      botReply =
+        'AI Explorers is a 3-day summer program where students learn about artificial intelligence, coding, and real-world tech skills.';
+    } else if (
+      lowerInput.includes('age') ||
+      lowerInput.includes('grade') ||
+      lowerInput.includes('who can join') ||
+      lowerInput.includes('eligibility')
+    ) {
+      botReply =
+        'The program is open to high school juniors, seniors, and early college students interested in technology.';
+    } else if (
+      lowerInput.includes('schedule') ||
+      lowerInput.includes('daily') ||
+      lowerInput.includes('routine') ||
+      lowerInput.includes('agenda')
+    ) {
+      botReply =
+        'Each day includes lectures, hands-on coding sessions, guest speakers, and project work.';
+    } else if (
+      lowerInput.includes('speaker') ||
+      lowerInput.includes('guest') ||
+      lowerInput.includes('talk') ||
+      lowerInput.includes('lecturer')
+    ) {
+      botReply =
+        'Our guest speakers include industry professionals and professors specializing in AI, computer science, and robotics.';
+    } else if (
+      lowerInput.includes('project') ||
+      lowerInput.includes('final') ||
+      lowerInput.includes('teamwork') ||
+      lowerInput.includes('collaboration')
+    ) {
+      botReply =
+        'You’ll work on a group project to apply AI concepts in a real-world challenge, presented on the last day of the program.';
+    } else if (
+      lowerInput.includes('contact') ||
+      lowerInput.includes('question') ||
+      lowerInput.includes('email') ||
+      lowerInput.includes('reach out')
+    ) {
+      botReply =
+        'For questions, please visit the "Contact Us" section at the top of the site. We’d love to help!';
+    } else {
+      botReply =
+        "I'm not sure how to answer that yet, but feel free to explore the website for more information!";
+    }
+
+    setMessages((prev) => [
+      ...prev,
+      { type: 'user', content: userMessage },
+      { type: 'bot', content: botReply },
+    ]);
+
+    setInput('');
+  };
+
   return (
-    <div className="w-full">
-      <h2 className="text-4xl font-bold text-center mb-12">PROGRAM</h2>
-      <Tabs.Root defaultValue={schedule[0].date} className="w-full">
-        <Tabs.List className="flex gap-2 mb-8">
-          {schedule.map((day) => (
-            <Tabs.Trigger
-              key={day.date}
-              value={day.date}
-              className={clsx(
-                "flex-1 py-3 px-6 rounded-full text-lg font-semibold transition-colors",
-                "data-[state=inactive]:bg-gray-100 data-[state=inactive]:text-gray-600",
-                "data-[state=active]:bg-[#8C1515] data-[state=active]:text-white"
-              )}
+    <div className="fixed bottom-4 right-4 z-50">
+      {isOpen ? (
+        <div className="bg-white rounded-lg shadow-xl w-80 overflow-hidden">
+          {/* Header */}
+          <div className="bg-[#8C1515] text-white p-4 flex justify-between items-center">
+            <h3 className="font-semibold">AI Explorers Assistant</h3>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-white hover:text-gray-200"
             >
-              {day.date}
-            </Tabs.Trigger>
-          ))}
-        </Tabs.List>
+              <X size={20} />
+            </button>
+          </div>
 
-        {schedule.map((day) => (
-          <Tabs.Content
-            key={day.date}
-            value={day.date}
-            className="focus:outline-none"
-          >
-            <div className="space-y-6">
-              {day.items.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex gap-8 p-6 bg-white rounded-lg shadow-sm"
+          {/* Messages */}
+          <div className="h-80 overflow-y-auto p-4 bg-gray-50">
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`mb-4 ${
+                  message.type === 'bot'
+                    ? 'bg-[#8C1515] text-white'
+                    : 'bg-gray-200 text-gray-800'
+                } p-3 rounded-lg max-w-[80%] ${
+                  message.type === 'bot' ? 'mr-auto' : 'ml-auto'
+                }`}
+              >
+                {message.content}
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Suggestions */}
+          <div className="p-2 px-4 border-t bg-white text-sm text-gray-700">
+            <div className="mb-2 font-semibold">Try asking:</div>
+            <div className="flex flex-wrap gap-2">
+              {[
+                'When does the program start?',
+                'How do I apply?',
+                'What is AI Explorers?',
+                'Is the program free?',
+                'What is the daily schedule like?',
+              ].map((suggestion, i) => (
+                <button
+                  key={i}
+                  onClick={() => {
+                    setInput(suggestion);
+                    setTimeout(() => handleSend(), 100);
+                  }}
+                  className="bg-gray-100 hover:bg-gray-200 text-sm px-3 py-1 rounded-full transition"
                 >
-                  <div className="w-48 flex-shrink-0">
-                    <div className="text-gray-600">{item.time}</div>
-                    {item.duration && (
-                      <div className="text-sm text-gray-500">({item.duration})</div>
-                    )}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    {item.speakers && (
-                      <div className="space-y-1">
-                        {item.speakers.map((speaker, idx) => (
-                          <div key={idx} className="text-gray-600">
-                            <span className="font-medium">{speaker.name}</span>
-                            <span className="text-gray-500 text-sm ml-2">
-                              {speaker.affiliation}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
+                  {suggestion}
+                </button>
               ))}
             </div>
-          </Tabs.Content>
-        ))}
-      </Tabs.Root>
+          </div>
+
+          {/* Input */}
+          <div className="p-4 border-t">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                placeholder="Type your message..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                className="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8C1515]"
+              />
+              <button
+                onClick={handleSend}
+                className="bg-[#8C1515] text-white px-4 py-2 rounded-lg hover:bg-[#66100F]"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-[#8C1515] text-white p-3 rounded-full shadow-lg hover:bg-[#66100F] transition-colors"
+        >
+          <MessageSquare size={24} />
+        </button>
+      )}
     </div>
   );
 }
