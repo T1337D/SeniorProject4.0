@@ -7,7 +7,7 @@ export function ChatWidget() {
     {
       type: 'bot',
       content:
-        "Welcome to Stanford Pre-Collegiate Summer Institutes! I'm an AI assistant here to help answer your questions about our programs. How can I assist you today?",
+        "Welcome to AI Explorers! I'm an AI assistant here to help answer your questions about our programs. How can I assist you today?",
     },
   ]);
   const [input, setInput] = useState('');
@@ -26,7 +26,7 @@ export function ChatWidget() {
         <div className="bg-white rounded-lg shadow-xl w-80 overflow-hidden">
           {/* Header */}
           <div className="bg-[#8C1515] text-white p-4 flex justify-between items-center">
-            <h3 className="font-semibold">Stanford Assistant</h3>
+            <h3 className="font-semibold">AI Explorers Assistant</h3>
             <button
               onClick={() => setIsOpen(false)}
               className="text-white hover:text-gray-200"
