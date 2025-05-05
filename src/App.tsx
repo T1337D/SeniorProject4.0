@@ -342,10 +342,12 @@ function App() {
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-3xl font-light leading-relaxed mb-8">
               "Insert map here"
+              <a href="https://mapmyvisitors.com/web/1by7l"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&cl=ffffff" /></a>
             </blockquote>
             <a href="https://mapmyvisitors.com/web/1by7l"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&cl=ffffff" /></a>
             <p className="text-xl font-semibold">Sara Mumolo</p>
             <p className="text-lg">Director of Online Outreach Programs</p>
+            <a href="https://mapmyvisitors.com/web/1by7l"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&cl=ffffff" /></a>
           </div>
         </section>
 
