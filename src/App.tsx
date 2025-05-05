@@ -1,5 +1,5 @@
-import React from 'react';
-import { Mail, BookOpen, Globe2, Award, Monitor, Facebook, Instagram, Youtube, AtSign } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, BookOpen, Globe2, Award, Monitor, Facebook, Instagram, Youtube, AtSign, Menu, X } from 'lucide-react';
 import { SpeakerTooltip } from './components/SpeakerTooltip';
 import { StatsCard } from './components/StatsCard';
 import { ProgramSchedule } from './components/ProgramSchedule';
@@ -7,13 +7,14 @@ import { ChatWidget } from './components/ChatWidget';
 import { speakers } from './data/speakers';
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Top Navigation - Fixed */}
       <nav className="bg-[#8C1515] text-white py-2 px-4 fixed top-0 w-full z-50">
         <div className="max-w-7xl mx-auto flex justify-end space-x-6 text-sm">
           <a href="#" className="hover:text-gray-200">Explore Our Programs</a>
-
           <a href="#" className="hover:text-gray-200">Contact Us</a>
           <a href="#" className="hover:text-gray-200">Support Us</a>
           <button className="hover:text-gray-200 flex items-center">
@@ -22,17 +23,14 @@ function App() {
         </div>
       </nav>
 
-      {/* Main Navigation - Fixed */}
+      {/* Main Navigation - Responsive */}
       <nav className="bg-white border-b shadow-sm py-4 px-4 fixed top-[32px] w-full z-40">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <a href="#" className="text-[#8C1515] font-serif text-2xl">AI Explorers</a>
-            <div className="text-gray-700">
-              <div className="text-sm"></div>
-              <div className="text-sm">Summer School</div>
-            </div>
+            <div className="text-gray-700 text-sm">Summer School</div>
           </div>
-          <div className="flex space-x-8">
+          <div className="hidden md:flex space-x-8">
             <a href="#" className="text-gray-700 hover:text-[#8C1515]">About</a>
             <a href="#" className="text-gray-700 hover:text-[#8C1515]">Courses</a>
             <a href="#" className="text-gray-700 hover:text-[#8C1515]">Student Life</a>
@@ -40,7 +38,24 @@ function App() {
             <a href="#" className="text-gray-700 hover:text-[#8C1515]">Tuition and Financial Aid</a>
             <a href="#" className="text-gray-700 hover:text-[#8C1515]">Questions?</a>
           </div>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-gray-700 hover:text-[#8C1515]"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 px-4 space-y-2">
+            <a href="#" className="block text-gray-700 hover:text-[#8C1515]">About</a>
+            <a href="#" className="block text-gray-700 hover:text-[#8C1515]">Courses</a>
+            <a href="#" className="block text-gray-700 hover:text-[#8C1515]">Student Life</a>
+            <a href="#" className="block text-gray-700 hover:text-[#8C1515]">Admissions</a>
+            <a href="#" className="block text-gray-700 hover:text-[#8C1515]">Tuition and Financial Aid</a>
+            <a href="#" className="block text-gray-700 hover:text-[#8C1515]">Questions?</a>
+          </div>
+        )}
       </nav>
 
       {/* Content wrapper with padding for fixed headers */}
