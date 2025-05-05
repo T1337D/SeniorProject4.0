@@ -315,8 +315,10 @@ function App() {
 
 */}
 
-        
-        {/* Student Testimonials */}
+
+{/*       
+
+        {/* Student Testimonials *
         <section className="bg-gray-100 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16">Hear from Our Students</h2>
@@ -345,10 +347,12 @@ function App() {
           </div>
         </section>
 
-     
+*/}     
 
 
-        {/* Photo Section */}
+
+{/*
+        {/* Photo Section *
         <section className="bg-gray-100 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16">Photos</h2>
@@ -371,6 +375,7 @@ function App() {
           </div>
         </section>
 
+*/}
 
         {/* Map Section */}
         <section className="bg-[#8C1515] text-white py-20 px-4">
