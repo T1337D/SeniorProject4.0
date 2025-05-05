@@ -19,26 +19,133 @@ export function ChatWidget() {
     const lowerInput = userMessage.toLowerCase();
     let botReply = '';
 
-    // Static keyword-based Q&A logic
-    if (lowerInput.includes('date') || lowerInput.includes('when')) {
-      botReply = 'The AI Explorers Summer School runs from June 28 to June 30.';
-    } else if (lowerInput.includes('location')) {
-      botReply = 'The program is hosted online, so you can join from anywhere.';
-    } else if (lowerInput.includes('apply') || lowerInput.includes('application')) {
-      botReply = 'You can apply through our website on the Admissions page.';
-    } else if (lowerInput.includes('cost') || lowerInput.includes('price')) {
+    // Friendly greetings
+    if (
+      lowerInput.includes('hello') ||
+      lowerInput.includes('hi') ||
+      lowerInput.includes('hey') ||
+      lowerInput.includes('good morning') ||
+      lowerInput.includes('good afternoon') ||
+      lowerInput.includes('greetings')
+    ) {
+      botReply =
+        'Hello! 👋 I’m here to help you with anything related to the AI Explorers program!';
+    }
+    // Farewells & thanks
+    else if (
+      lowerInput.includes('bye') ||
+      lowerInput.includes('goodbye') ||
+      lowerInput.includes('see you') ||
+      lowerInput.includes('farewell') ||
+      lowerInput.includes('thanks') ||
+      lowerInput.includes('thank you')
+    ) {
+      botReply =
+        'Goodbye! 😊 Feel free to come back if you have more questions. Have a great day!';
+    }
+    //  Dates
+    else if (
+      lowerInput.includes('date') ||
+      lowerInput.includes('when') ||
+      lowerInput.includes('start') ||
+      lowerInput.includes('begin')
+    ) {
+      botReply =
+        'The AI Explorers Summer School runs from June 28 to June 30.';
+    }
+    //  Location
+    else if (
+      lowerInput.includes('location') ||
+      lowerInput.includes('where') ||
+      lowerInput.includes('held') ||
+      lowerInput.includes('hosted')
+    ) {
+      botReply =
+        'The program is hosted online, allowing students to participate from anywhere.';
+    }
+    // Admissions
+    else if (
+      lowerInput.includes('apply') ||
+      lowerInput.includes('application') ||
+      lowerInput.includes('admission')
+    ) {
+      botReply =
+        'You can apply through our website on the Admissions page. Ensure to submit your application before the deadline.';
+    }
+    // Cost
+    else if (
+      lowerInput.includes('cost') ||
+      lowerInput.includes('price') ||
+      lowerInput.includes('fee') ||
+      lowerInput.includes('tuition')
+    ) {
       botReply = 'The program is free for all admitted students.';
-    } else if (lowerInput.includes('ai explorers')) {
-      botReply = 'AI Explorers is a 3-day summer program where students learn about AI, coding, and real-world tech applications.';
-    } else if (lowerInput.includes('schedule')) {
-      botReply = 'Each day includes lectures, hands-on coding, guest speakers, and team projects.';
-    } else if (lowerInput.includes('age') || lowerInput.includes('grade')) {
-      botReply = 'The program is open to high school and early college students interested in technology.';
-    } else {
-      botReply = "I'm not sure how to answer that yet, but feel free to explore the website for more information!";
+    }
+    // What is it?
+    else if (
+      lowerInput.includes('ai explorers') ||
+      lowerInput.includes('what is') ||
+      lowerInput.includes('program about')
+    ) {
+      botReply =
+        'AI Explorers is a 3-day summer program where students learn about artificial intelligence, coding, and real-world tech skills.';
+    }
+    //  Age/Eligibility
+    else if (
+      lowerInput.includes('age') ||
+      lowerInput.includes('grade') ||
+      lowerInput.includes('who can join') ||
+      lowerInput.includes('eligibility')
+    ) {
+      botReply =
+        'The program is open to high school juniors, seniors, and early college students interested in technology.';
+    }
+    //  Schedule
+    else if (
+      lowerInput.includes('schedule') ||
+      lowerInput.includes('daily') ||
+      lowerInput.includes('routine') ||
+      lowerInput.includes('agenda')
+    ) {
+      botReply =
+        'Each day includes lectures, hands-on coding sessions, guest speakers, and project work.';
+    }
+    // Speakers
+    else if (
+      lowerInput.includes('speaker') ||
+      lowerInput.includes('guest') ||
+      lowerInput.includes('talk') ||
+      lowerInput.includes('lecturer')
+    ) {
+      botReply =
+        'Our guest speakers include industry professionals and professors specializing in AI, computer science, and robotics.';
+    }
+    // Projects
+    else if (
+      lowerInput.includes('project') ||
+      lowerInput.includes('final') ||
+      lowerInput.includes('teamwork') ||
+      lowerInput.includes('collaboration')
+    ) {
+      botReply =
+        'You’ll work on a group project to apply AI concepts in a real-world challenge, presented on the last day of the program.';
+    }
+    //  Contact
+    else if (
+      lowerInput.includes('contact') ||
+      lowerInput.includes('question') ||
+      lowerInput.includes('email') ||
+      lowerInput.includes('reach out')
+    ) {
+      botReply =
+        'For questions, please visit the "Contact Us" section at the top of the site. We’d love to help!';
+    }
+    //  Fallback
+    else {
+      botReply =
+        "I'm not sure how to answer that yet, but feel free to explore the website for more information!";
     }
 
-    // Add user and bot messages to chat
     setMessages((prev) => [
       ...prev,
       { type: 'user', content: userMessage },

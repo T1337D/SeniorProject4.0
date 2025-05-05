@@ -13,8 +13,7 @@ function App() {
       <nav className="bg-[#8C1515] text-white py-2 px-4 fixed top-0 w-full z-50">
         <div className="max-w-7xl mx-auto flex justify-end space-x-6 text-sm">
           <a href="#" className="hover:text-gray-200">Explore Our Programs</a>
-          <a href="#" className="hover:text-gray-200">Jobs</a>
-          <a href="#" className="hover:text-gray-200">Join Our Mailing List</a>
+
           <a href="#" className="hover:text-gray-200">Contact Us</a>
           <a href="#" className="hover:text-gray-200">Support Us</a>
           <button className="hover:text-gray-200 flex items-center">
