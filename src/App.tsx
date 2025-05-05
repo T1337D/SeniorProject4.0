@@ -78,11 +78,12 @@ function App() {
               machine learning, and deep learning, and apply your knowledge to real-world projects. Engage in
               exciting topics such as Emotional Analytics, Fake News Detection, Deep Learning, and Visual
               Analytics, all while working with peers who share your passion for innovation.
-
-              Whether you are just starting your journey in AI or looking to deepen your understanding, this
-              camp will provide you with the tools, knowledge, and inspiration to take your skills to the next
-              level. Don’t miss this opportunity to build your expertise, strengthen your resume, and be part of
-              the future of technology.
+              </p>
+              <p className="text-xl max-w-3xl">
+                Whether you are just starting your journey in AI or looking to deepen your understanding, this
+                camp will provide you with the tools, knowledge, and inspiration to take your skills to the next
+                level. Don’t miss this opportunity to build your expertise, strengthen your resume, and be part of
+                the future of technology.
               </p>
             </div>
           </div>
@@ -109,7 +110,7 @@ function App() {
                 </section>
 
                 {/* Program Highlights */}
-                <section className="py-20 px-4">
+                <section className="py-20 px-4 bg-gray-50">
                   <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-4xl font-bold text-center mb-16">Program Highlights</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
