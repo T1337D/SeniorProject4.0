@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 
 export function ChatWidget() {
@@ -11,6 +11,14 @@ export function ChatWidget() {
     },
   ]);
   const [input, setInput] = useState('');
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll when messages update
+  useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
 
   const handleSend = () => {
     if (!input.trim()) return;
@@ -19,7 +27,7 @@ export function ChatWidget() {
     const lowerInput = userMessage.toLowerCase();
     let botReply = '';
 
-    // Friendly greetings
+    // Friendly greetings and farewells
     if (
       lowerInput.includes('hello') ||
       lowerInput.includes('hi') ||
@@ -30,9 +38,7 @@ export function ChatWidget() {
     ) {
       botReply =
         'Hello! 👋 I’m here to help you with anything related to the AI Explorers program!';
-    }
-    // Farewells & thanks
-    else if (
+    } else if (
       lowerInput.includes('bye') ||
       lowerInput.includes('goodbye') ||
       lowerInput.includes('see you') ||
@@ -43,7 +49,7 @@ export function ChatWidget() {
       botReply =
         'Goodbye! 😊 Feel free to come back if you have more questions. Have a great day!';
     }
-    //  Dates
+    // Static Q&A responses
     else if (
       lowerInput.includes('date') ||
       lowerInput.includes('when') ||
@@ -52,9 +58,7 @@ export function ChatWidget() {
     ) {
       botReply =
         'The AI Explorers Summer School runs from June 28 to June 30.';
-    }
-    //  Location
-    else if (
+    } else if (
       lowerInput.includes('location') ||
       lowerInput.includes('where') ||
       lowerInput.includes('held') ||
@@ -62,36 +66,28 @@ export function ChatWidget() {
     ) {
       botReply =
         'The program is hosted online, allowing students to participate from anywhere.';
-    }
-    // Admissions
-    else if (
+    } else if (
       lowerInput.includes('apply') ||
       lowerInput.includes('application') ||
       lowerInput.includes('admission')
     ) {
       botReply =
         'You can apply through our website on the Admissions page. Ensure to submit your application before the deadline.';
-    }
-    // Cost
-    else if (
+    } else if (
       lowerInput.includes('cost') ||
       lowerInput.includes('price') ||
       lowerInput.includes('fee') ||
       lowerInput.includes('tuition')
     ) {
       botReply = 'The program is free for all admitted students.';
-    }
-    // What is it?
-    else if (
+    } else if (
       lowerInput.includes('ai explorers') ||
       lowerInput.includes('what is') ||
       lowerInput.includes('program about')
     ) {
       botReply =
         'AI Explorers is a 3-day summer program where students learn about artificial intelligence, coding, and real-world tech skills.';
-    }
-    //  Age/Eligibility
-    else if (
+    } else if (
       lowerInput.includes('age') ||
       lowerInput.includes('grade') ||
       lowerInput.includes('who can join') ||
@@ -99,9 +95,7 @@ export function ChatWidget() {
     ) {
       botReply =
         'The program is open to high school juniors, seniors, and early college students interested in technology.';
-    }
-    //  Schedule
-    else if (
+    } else if (
       lowerInput.includes('schedule') ||
       lowerInput.includes('daily') ||
       lowerInput.includes('routine') ||
@@ -109,9 +103,7 @@ export function ChatWidget() {
     ) {
       botReply =
         'Each day includes lectures, hands-on coding sessions, guest speakers, and project work.';
-    }
-    // Speakers
-    else if (
+    } else if (
       lowerInput.includes('speaker') ||
       lowerInput.includes('guest') ||
       lowerInput.includes('talk') ||
@@ -119,9 +111,7 @@ export function ChatWidget() {
     ) {
       botReply =
         'Our guest speakers include industry professionals and professors specializing in AI, computer science, and robotics.';
-    }
-    // Projects
-    else if (
+    } else if (
       lowerInput.includes('project') ||
       lowerInput.includes('final') ||
       lowerInput.includes('teamwork') ||
@@ -129,9 +119,7 @@ export function ChatWidget() {
     ) {
       botReply =
         'You’ll work on a group project to apply AI concepts in a real-world challenge, presented on the last day of the program.';
-    }
-    //  Contact
-    else if (
+    } else if (
       lowerInput.includes('contact') ||
       lowerInput.includes('question') ||
       lowerInput.includes('email') ||
@@ -139,9 +127,7 @@ export function ChatWidget() {
     ) {
       botReply =
         'For questions, please visit the "Contact Us" section at the top of the site. We’d love to help!';
-    }
-    //  Fallback
-    else {
+    } else {
       botReply =
         "I'm not sure how to answer that yet, but feel free to explore the website for more information!";
     }
@@ -186,6 +172,32 @@ export function ChatWidget() {
                 {message.content}
               </div>
             ))}
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Suggestions */}
+          <div className="p-2 px-4 border-t bg-white text-sm text-gray-700">
+            <div className="mb-2 font-semibold">Try asking:</div>
+            <div className="flex flex-wrap gap-2">
+              {[
+                'When does the program start?',
+                'How do I apply?',
+                'What is AI Explorers?',
+                'Is the program free?',
+                'What is the daily schedule like?',
+              ].map((suggestion, i) => (
+                <button
+                  key={i}
+                  onClick={() => {
+                    setInput(suggestion);
+                    setTimeout(() => handleSend(), 100);
+                  }}
+                  className="bg-gray-100 hover:bg-gray-200 text-sm px-3 py-1 rounded-full transition"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Input */}
