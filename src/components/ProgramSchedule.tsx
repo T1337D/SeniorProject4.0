@@ -18,96 +18,49 @@ interface DaySchedule {
 
 const schedule: DaySchedule[] = [
   {
-    date: 'Mar 28',
+    date: 'Monday',
     items: [
-      {
-        time: '9:30-10:30am',
-        title: 'Introduction',
-        speakers: [
-          {
-            name: 'Dr. Sarah Chen',
-            affiliation: 'Stanford University'
-          }
-        ],
-        duration: '30 mins'
-      },
-      {
-        time: '10:30-11:00am',
-        title: 'Break'
-      },
-      {
-        time: '11:00am-1:00pm',
-        title: 'Machine Learning Fundamentals',
-        speakers: [
-          {
-            name: 'Prof. Michael Zhang',
-            affiliation: 'Stanford AI Lab'
-          }
-        ],
-        duration: '2 hours'
-      }
+      { time: '9:00–9:30am', title: 'Welcome and Orientation' },
+      { time: '9:30–10:30am', title: 'What is AI? Past, Present, and Future' },
+      { time: '10:30–11:30am', title: 'Key Concepts: ML, Deep Learning, Data Science' },
+      { time: '11:30am–12:00pm', title: 'Icebreaker Activity: Meet Your Team!' },
+      { time: '1:00–3:00pm', title: 'Hands-On Lab: Build Your First AI Model (Image Classification)' }
     ]
   },
   {
-    date: 'Mar 29',
+    date: 'Tuesday',
     items: [
-      {
-        time: '9:30-11:00am',
-        title: 'Advanced AI Concepts',
-        speakers: [
-          {
-            name: 'Dr. Emily Johnson',
-            affiliation: 'Stanford University'
-          }
-        ],
-        duration: '1.5 hours'
-      },
-      {
-        time: '11:00-11:30am',
-        title: 'Break'
-      },
-      {
-        time: '11:30am-1:00pm',
-        title: 'Practical Applications',
-        speakers: [
-          {
-            name: 'Prof. David Lee',
-            affiliation: 'Stanford AI Lab'
-          }
-        ],
-        duration: '1.5 hours'
-      }
+      { time: '9:00–10:30am', title: 'Lecture: Emotional Analytics with AI' },
+      { time: '10:30–11:30am', title: 'Intro to Deep Learning & Neural Networks' },
+      { time: '1:00–2:30pm', title: 'Lab: Train Emotion Recognition Model' },
+      { time: '2:30–3:30pm', title: 'Workshop: Python Libraries (Pandas, NumPy, Scikit-learn, TensorFlow)' }
     ]
   },
   {
-    date: 'Mar 30',
+    date: 'Wednesday',
     items: [
-      {
-        time: '9:30-11:00am',
-        title: 'Future of AI',
-        speakers: [
-          {
-            name: 'Dr. Rachel Brown',
-            affiliation: 'Stanford University'
-          }
-        ],
-        duration: '1.5 hours'
-      },
-      {
-        time: '11:00-11:30am',
-        title: 'Break'
-      },
-      {
-        time: '11:30am-1:00pm',
-        title: 'Closing Remarks',
-        speakers: [
-          {
-            name: 'Prof. Thomas Wilson',
-            affiliation: 'Stanford AI Lab'
-          }
-        ],
-        duration: '1.5 hours'
-      }
+      { time: '9:00–10:30am', title: 'Lecture: Misinformation and AI’s Role' },
+      { time: '10:30–11:30am', title: 'Intro to NLP: Preprocessing & Feature Extraction' },
+      { time: '1:00–2:30pm', title: 'Lab: Fake News Detection System' },
+      { time: '2:30–3:30pm', title: 'Group Discussion: Ethics & Challenges in AI Media' }
+    ]
+  },
+  {
+    date: 'Thursday',
+    items: [
+      { time: '9:00–10:30am', title: 'Lecture: Visualizing Data for Insight' },
+      { time: '10:30–11:30am', title: 'Intro to Visual Analytics Tools' },
+      { time: '1:00–2:00pm', title: 'Lab: Create Dashboards & Visual Stories' },
+      { time: '2:00–3:30pm', title: 'Final Project: Team Work Begins' }
+    ]
+  },
+  {
+    date: 'Friday',
+    items: [
+      { time: '9:00–11:00am', title: 'Final Touches: Complete Your Project' },
+      { time: '11:00am–1:00pm', title: 'Project Presentations' },
+      { time: '1:00–2:00pm', title: 'Panel: Careers and Opportunities in AI' },
+      { time: '2:00–3:00pm', title: 'Awards, Certificates & Closing Ceremony' }
     ]
   }
 ];
@@ -117,13 +70,13 @@ export function ProgramSchedule() {
     <div className="w-full">
       <h2 className="text-4xl font-bold text-center mb-12">PROGRAM</h2>
       <Tabs.Root defaultValue={schedule[0].date} className="w-full">
-        <Tabs.List className="flex gap-2 mb-8">
+        <Tabs.List className="flex gap-2 mb-8 overflow-x-auto">
           {schedule.map((day) => (
             <Tabs.Trigger
               key={day.date}
               value={day.date}
               className={clsx(
-                "flex-1 py-3 px-6 rounded-full text-lg font-semibold transition-colors",
+                "flex-1 py-3 px-6 rounded-full text-lg font-semibold transition-colors whitespace-nowrap",
                 "data-[state=inactive]:bg-gray-100 data-[state=inactive]:text-gray-600",
                 "data-[state=active]:bg-[#8C1515] data-[state=active]:text-white"
               )}
