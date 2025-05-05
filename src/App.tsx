@@ -24,7 +24,7 @@ function App() {
       </nav>
 
       {/* Main Navigation - Responsive */}
-      <nav className="bg-white border-b shadow-sm py-4 px-4 fixed top-[32px] w-full z-40">
+      <nav className="bg-white border-b shadow-sm py-5 px-4 fixed top-[40px] w-full z-40">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <a href="#" className="text-[#8C1515] font-serif text-2xl">AI Explorers</a>
