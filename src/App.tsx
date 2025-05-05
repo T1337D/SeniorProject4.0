@@ -71,23 +71,22 @@ function App() {
           <div className="absolute inset-0 flex items-center">
             <div className="max-w-7xl mx-auto px-4 text-white">
               <h1 className="text-5xl font-bold mb-6">Expand Your Intellectual Horizons</h1>
-              <p className="text-xl max-w-3xl">
-              Are you ready to dive into the fascinating world of Artificial Intelligence? Our one-week Summer
-              Camp is designed for undergraduate students eager to explore cutting-edge AI concepts and gain 
-              valuable hands-on experience. Throughout the week, you will learn the fundamentals of AI,
-              machine learning, and deep learning, and apply your knowledge to real-world projects. Engage in
-              exciting topics such as Emotional Analytics, Fake News Detection, Deep Learning, and Visual
-              Analytics, all while working with peers who share your passion for innovation.
-              </p>
-              <p>
-                
-              </p>
-              <p className="text-xl max-w-3xl">
-                Whether you are just starting your journey in AI or looking to deepen your understanding, this
-                camp will provide you with the tools, knowledge, and inspiration to take your skills to the next
-                level. Don’t miss this opportunity to build your expertise, strengthen your resume, and be part of
-                the future of technology.
-              </p>
+<p className="text-xl max-w-3xl"> 
+  Are you ready to dive into the fascinating world of Artificial Intelligence? Our one-week Summer
+  Camp is designed for undergraduate students eager to explore cutting-edge AI concepts and gain 
+  valuable hands-on experience. Throughout the week, you will learn the fundamentals of AI,
+  machine learning, and deep learning, and apply your knowledge to real-world projects. Engage in
+  exciting topics such as Emotional Analytics, Fake News Detection, Deep Learning, and Visual
+  Analytics, all while working with peers who share your passion for innovation.
+</p>
+
+<p className="text-xl max-w-3xl mt-6">
+  Whether you are just starting your journey in AI or looking to deepen your understanding, this
+  camp will provide you with the tools, knowledge, and inspiration to take your skills to the next
+  level. Don’t miss this opportunity to build your expertise, strengthen your resume, and be part of
+  the future of technology.
+</p> 
+
             </div>
           </div>
         </div>
