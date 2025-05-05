@@ -340,12 +340,11 @@ function App() {
         {/* Map Section*/}
         <section className="bg-[#8C1515] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <blockquote className="text-3xl font-light leading-relaxed mb-8">
-              "Insert map here"
-              <a href='https://mapmyvisitors.com/web/1by7l'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=080808&w=753&t=tt&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&ct=808080'/></a>
-            </blockquote>
-            <p className="text-xl font-semibold">Sara Mumolo</p>
-            <p className="text-lg">Director of Online Outreach Programs</p>
+            <h2 className="text-3xl font-bold mb-6">Website Visitors</h2>
+            
+            <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=080808&w=753&t=tt&d=BkyeK9AhJPLWBwhLczb3lZI3hIMIVxz3xtvjM0-S5Xk&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+
+
           </div>
         </section>
 
