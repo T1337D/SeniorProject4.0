@@ -12,7 +12,7 @@ export const speakers: Speaker[] = [
     name: 'Dr. Nafaa Jabeur',
     title: 'Associate Professor, GUtech University Oman',
     bio: 'Dr. Nafaa brings expertise in AI for Intelligent Transportation Systems. His research covers smart mobility, autonomous vehicles, and optimizing transportation using AI.',
-    image: 'https://images.unsplash.com/photo-1603415526960-f7e0328b1b83?auto=format&fit=crop&w=200&h=200' // Replace with real image
+    image: 'https://media.licdn.com/dms/image/v2/C5103AQElSQEku6LLAw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516872573531?e=2147483647&v=beta&t=eOl0tPwtlD1GeU7nR3XMhpklGagOw9Mki90zPW1CBQs' // Replace with real image
   },
   {
     id: '2',
