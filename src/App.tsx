@@ -276,11 +276,13 @@ function App() {
           </div>
         </section>
 
-        {/* Director Quote Section */}
+{/*
+
+        {/* Director Quote Section *
         <section className="bg-[#8C1515] text-white py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-3xl font-light leading-relaxed mb-8">
-              "Stanford Pre-Collegiate Studies inspires academically motivated Pre-Collegiate students 
+              "AI Explorers inspires academically motivated students 
               on their journey to becoming leaders that will transform the future. In an inclusive 
               classroom setting without the pressure of grades, students explore advanced study and 
               build bonds with peers from around the world."
@@ -290,8 +292,10 @@ function App() {
           </div>
         </section>
 
+*/}        
 
-        {/* Stanford Campus Image Section */}
+{/*
+        {/* Showcasing photo Section *
         <section className="py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <img 
@@ -300,42 +304,16 @@ function App() {
               className="w-full h-[400px] object-cover rounded-lg mb-8"
             />
             <p className="text-lg text-gray-700 max-w-4xl mx-auto text-center">
-              Stanford Pre-Collegiate Studies (SPCS) inspires students from around the world to explore 
+              AI Explorers inspires students from around the world to explore 
               academically rigorous learning opportunities through online and residential enrichment 
-              programs. Committed to Stanford University's ideals of academic excellence, SPCS fosters 
+              programs. Committed to our school's ideals of academic excellence, we foster 
               inclusive and accessible communities that enhance learning for the next generation of 
               global citizens.
             </p>
           </div>
         </section>
 
-
-
-
-
-        {/* Find Yourself at AI Explorers */}
-        <section 
-          className="relative h-[500px] bg-cover bg-center" 
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80")'
-          }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-center text-center">
-            <div className="text-white">
-              <h2 className="text-5xl font-bold mb-12">Explore the Future</h2>
-              <div className="flex gap-8">
-                <a href="#" className="text-xl border-2 border-white px-8 py-3 hover:bg-white hover:text-[#8C1515] transition-colors">
-                  View Our Course Catalog
-                </a>
-                <a href="#" className="text-xl border-2 border-white px-8 py-3 hover:bg-white hover:text-[#8C1515] transition-colors">
-                  Plan Your Summer
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
+*/}
 
         
         {/* Student Testimonials */}
@@ -406,7 +384,29 @@ function App() {
             </div>
           </div>
         </section>   
-
+      
+        {/* Find Yourself at AI Explorers */}
+        <section 
+          className="relative h-[500px] bg-cover bg-center" 
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80")'
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 flex items-center justify-center text-center">
+            <div className="text-white">
+              <h2 className="text-5xl font-bold mb-12">Explore the Future</h2>
+              <div className="flex gap-8">
+                <a href="#" className="text-xl border-2 border-white px-8 py-3 hover:bg-white hover:text-[#8C1515] transition-colors">
+                  View Our Course Catalog
+                </a>
+                <a href="#" className="text-xl border-2 border-white px-8 py-3 hover:bg-white hover:text-[#8C1515] transition-colors">
+                  Plan Your Summer
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
 {/* 
         {/* Mailing List Section }
